@@ -80,10 +80,6 @@ public class Utilidades {
         return inputValue.nextLine();
     }
 
-    public static int getIndex(ArrayList<ArrayList<String>> datosCSV, String campoABuscar) {
-        return datosCSV.get(0).indexOf(campoABuscar);
-    }
-
     public static void limpiarPantalla() {
         for (int x = 0; x < 50; x++) {
             System.out.println(" ");
@@ -92,19 +88,6 @@ public class Utilidades {
 
     public static void esperarEnter() {
         leerCadena("\nApreta Entrer para continuar...");
-    }
-
-    public static File buscarArchivo(String nombreArchivo) {
-        if (carpeta.listFiles() == null) {
-            return new File(carpeta.getPath() + "/" + nombreArchivo);
-        }
-
-        for (File archivo: carpeta.listFiles()) {
-            if (archivo.getName() == nombreArchivo) {
-                return archivo;
-            }
-        }
-        return new File(carpeta.getPath() + "/" + nombreArchivo);
     }
 
     public static Scanner inputValue;
