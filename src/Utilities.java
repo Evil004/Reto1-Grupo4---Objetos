@@ -5,7 +5,7 @@ import java.util.Scanner;
  * @author Pere Prior
  */
 
-public class Utilidades {
+public class Utilities {
 
     public static boolean comprobarConsola() {
         while (true) {
