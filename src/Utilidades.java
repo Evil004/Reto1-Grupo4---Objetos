@@ -1,5 +1,3 @@
-import java.io.File;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -23,28 +21,6 @@ public class Utilidades {
                     return false;
                 default:
                     System.out.println("Por favor, introduce una opcion valida.");
-            }
-        }
-    }
-
-    private static boolean deberiaCerrarse() {
-        boolean cerrar = true;
-        if (!guardado) {
-            cerrar = isCerrar();
-        }
-        return cerrar;
-    }
-
-    private static boolean isCerrar() {
-        //boolean flag = true;
-        while (true) {
-            String eleccion = leerCadena("Vas a cerrar el programa, pero tienes datos sin guardar, estas seguro? (si/no)");
-            if("si".equals(eleccion)){
-                return true;
-            }else if("no".equals(eleccion)){
-                return false;
-            }else{
-                System.out.println("No has introducido una opcion valida.");
             }
         }
     }
@@ -91,5 +67,8 @@ public class Utilidades {
     }
 
     public static Scanner inputValue;
+    public static int eleccion;
+    public static String lineaInf = generateLines("¯");
+    public static String lineaSup = generateLines("_");
 
 }
