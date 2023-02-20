@@ -25,6 +25,26 @@ public class ExtraHours {
                 '}';
     }
 
+    public int getStartHour() {
+        return startHour;
+    }
+
+    public int getEndTime() {
+        return endTime;
+    }
+
+    public int getPlace() {
+        return place;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getNif() {
+        return nif;
+    }
+
     String nif;
     String date;
     int startHour;
