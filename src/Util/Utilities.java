@@ -10,12 +10,12 @@ import java.util.Scanner;
 
 public class Utilities {
 
-    public static boolean comprobarConsola() {
+    public static boolean checkConsole() {
         while (true) {
             System.out.println("Para que este programa se vea correctamente, necesitas una consola con 166 columnas o mas.\n"
                     + "Si ves la linea de abajo con cortes o saltos de linea, es que tu consola no tiene 166 columnas o mas. Por favor redimensiona la consola.\n"
-                    + lineaSup);
-            String eleccion = leerCadena("Ves bien la linea de arriba? (si/no)");
+                    + supLine);
+            String eleccion = readLine("Ves bien la linea de arriba? (si/no)");
             switch (eleccion) {
                 case "si":
                     return true;
@@ -28,57 +28,61 @@ public class Utilities {
         }
     }
 
-    public static int leerEntero(String mensaje) throws InputMismatchException {
-        int numero;
+    public static int readNumber(String message) throws InputMismatchException {
+        int number;
         while (true) {
             try {
                 inputValue = new Scanner(System.in);
-                System.out.println(mensaje);
-                numero = inputValue.nextInt();
+                System.out.println(message);
+                number = inputValue.nextInt();
                 break;
             } catch (InputMismatchException e) {
-                System.out.println("No es un numero valido");
+                System.out.println("Is not a valid number");
             }
 
         }
-        return numero;
+        return number;
 
     }
 
-    public static String generateLines(String caracter) {
-        String linea = "";
+    public static String generateLines(String character) {
+        String line = "";
         for (int i = 0; i < 166; i++) {
-            linea = linea.concat(caracter);
+            line = line.concat(character);
         }
-        return linea;
+        return line;
     }
 
-    public static String leerCadena(String mensaje) throws InputMismatchException {
+    public static String readLine(String message) throws InputMismatchException {
         inputValue = new Scanner(System.in);
-        System.out.println(mensaje);
+        System.out.println(message);
         return inputValue.nextLine();
     }
 
-    public static void limpiarPantalla() {
+    public static void cleanScreen() {
         for (int x = 0; x < 50; x++) {
             System.out.println(" ");
         }
     }
 
-    public static void esperarEnter() {
-        leerCadena("\nApreta Entrer para continuar...");
+    public static int getIndex(ArrayList<ArrayList<String>> dataCSV, String column) {
+        return dataCSV.get(0).indexOf(column);
+    }
+
+    public static void waitEnter() {
+        readLine("\nPress ENTER to continue...");
     }
 
     public static Scanner inputValue;
-    public static int eleccion;
-    public static String lineaInf = generateLines("¯");
-    public static String lineaSup = generateLines("_");
+    public static int choice;
+    public static String lowLine = generateLines("¯");
+    public static String supLine = generateLines("_");
 
 
     public static ArrayList<String> arrayToArrayList(String[] array){
         ArrayList<String> finalArrayList = new ArrayList<>();
-        for (String camp : array ) {
-            finalArrayList.add(camp);
+        for (String field : array ) {
+            finalArrayList.add(field);
         }
 
         return finalArrayList;

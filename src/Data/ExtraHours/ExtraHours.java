@@ -6,12 +6,6 @@ package Data.ExtraHours;
 
 public class ExtraHours {
 
-    String nif;
-    String date;
-    int startHour;
-    int endTime;
-    int place;
-
     public ExtraHours(String nif, String date, int startHour, int endHour, int place) {
         this.nif = nif;
         this.date = date;
@@ -30,4 +24,11 @@ public class ExtraHours {
                 ", Place: " + place +
                 '}';
     }
+
+    String nif;
+    String date;
+    int startHour;
+    int endTime;
+    int place;
+
 }

@@ -28,7 +28,7 @@ public class EmployeeQuery {
     }
     public void employeeByCategory(int id,ArrayList<Employee> employees){
         System.out.println("A1 - A2 - A3 - B1 - B2 -B3");
-        String categoria = Util.Utilities.leerCadena("Introduce la categoria de la que obtener los employees: ");
+        String categoria = Util.Utilities.readLine("Introduce la categoria de la que obtener los employees: ");
         for (Employee employee: employees) {
             if (employee.catGrupProfesional.equals(categoria)) {
                 imprimirDatosEmpleado(employee);
