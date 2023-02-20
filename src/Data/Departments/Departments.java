@@ -4,8 +4,7 @@ package Data.Departments;
  * This class stores the Departments.
  */
 public class Departments  {
-    public static void add(Departments departments) {
-    }
+
     int id;
     String name;
     public Departments(int id, String name) {

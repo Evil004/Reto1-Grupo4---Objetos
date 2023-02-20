@@ -79,6 +79,12 @@ public class Utilities {
     public static String supLine = generateLines("_");
 
 
+    /**
+     * author: Óscar Fernández.
+     * A function to convert a String array to an ArrayList of Strings.
+     * @param array An string array
+     * @return
+     */
     public static ArrayList<String> arrayToArrayList(String[] array){
         ArrayList<String> finalArrayList = new ArrayList<>();
         for (String field : array ) {
@@ -86,6 +92,15 @@ public class Utilities {
         }
 
         return finalArrayList;
+    }
+
+    public static int getIndexInArray(String[] array, String value){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].equals(value)){
+                return i;
+            }
+        }
+        return -1;
     }
 
 }
