@@ -35,8 +35,6 @@ public class Employee {
         return id;
     }
 
-    //I want all the getter for this class
-
     public String getDni() {
         return dni;
     }
@@ -80,8 +78,5 @@ public class Employee {
     public int getDepartamento() {
         return departamento;
     }
-
-
-
 
 }
