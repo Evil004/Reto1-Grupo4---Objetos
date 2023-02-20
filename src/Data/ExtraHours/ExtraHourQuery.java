@@ -16,8 +16,8 @@ public class ExtraHourQuery{
                 if (hour.nif.equals(dni)) {
                     for (Employee employee: EmployeesData.getEmployees()) {
                         if (employee.getDni().equals(dni)) {
-                            int horas = (hour.hora_f - hour.hora_i);
-                            System.out.println(employee.nombre + " worked " + horas + " extra hours");
+                            int hours = (hour.getEndTime() - hour.getStartHour());
+                            System.out.println(employee.getNombre() + " worked " + hours + " extra hours");
                             return;
                         }
                     }
@@ -30,7 +30,7 @@ public class ExtraHourQuery{
 
     }
 
-    public static void consultarHorasExtraID() {
+    /*public static void consultarHorasExtraID() {
         String dniEmpleado = null;
         Empleado empleado = null;
 
@@ -61,6 +61,6 @@ public class ExtraHourQuery{
 
         }
         System.out.println("Ese empleado no tiene horas extra.");
-    }
+    }*/
 
 }
