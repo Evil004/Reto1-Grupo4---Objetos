@@ -1,5 +1,6 @@
 package Data.Employees;
 import java.util.ArrayList;
+import Util.Utilities;
 
 
 public class EmployeeQuery {
@@ -26,7 +27,8 @@ public class EmployeeQuery {
         System.out.println("Email: " + employee.email);
 
     }
-    public void employeeByCategory(int id,ArrayList<Employee> employees){
+    public void employeeByCategory(String Category){
+        ArrayList<Employee> employees = EmployeesData.getEmployees();
         System.out.println("A1 - A2 - A3 - B1 - B2 -B3");
         String categoria = Util.Utilities.readLine("Introduce la categoria de la que obtener los employees: ");
         for (Employee employee: employees) {
@@ -35,10 +37,10 @@ public class EmployeeQuery {
             }
         }
     }
-    public static void employeeByDNI(int dni,ArrayList<Employee> employees) {
+    public static void employeeByDNI(String dni) {
+        ArrayList<Employee> employees = EmployeesData.getEmployees();
 
         while (true) {
-          //  String dni = Util.Utilities.leerCadena("Introduce el DNI del empleado a buscar: ");
             for (Employee employee: employees) {
                 if (employee.dni.equals(dni)) {
                     imprimirDatosEmpleado(employee);
@@ -47,6 +49,19 @@ public class EmployeeQuery {
             }
             System.out.println("No existe un empleado con ese DNI");
         }
+    }
+    public static void employeeByID(int ID) {
+        ArrayList<Employee> employees = EmployeesData.getEmployees();
+        while (true) {
+            for (Employee employee: employees) {
+                if (employee.id == ID) {
+                    imprimirDatosEmpleado(employee);
+                    return;
+                }
+            }
+            System.out.println("No se ha encontrado un empleado con ese ID.");
+        }
+
     }
 
 }
