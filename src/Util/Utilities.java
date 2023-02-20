@@ -1,3 +1,6 @@
+package Util;
+
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -5,7 +8,7 @@ import java.util.Scanner;
  * @author Pere Prior
  */
 
-public class Utilidades {
+public class Utilities {
 
     public static boolean comprobarConsola() {
         while (true) {
@@ -70,5 +73,15 @@ public class Utilidades {
     public static int eleccion;
     public static String lineaInf = generateLines("¯");
     public static String lineaSup = generateLines("_");
+
+
+    public static ArrayList<String> arrayToArrayList(String[] array){
+        ArrayList<String> finalArrayList = new ArrayList<>();
+        for (String camp : array ) {
+            finalArrayList.add(camp);
+        }
+
+        return finalArrayList;
+    }
 
 }
