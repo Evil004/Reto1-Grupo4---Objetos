@@ -9,6 +9,10 @@ public class EmployeesData {
         this.employees = employees;
     }
 
+    public static ArrayList<Employee> getEmployees(){
+        return employees;
+    }
+
     public EmployeesData() {
         this.employees = new ArrayList<>();
     }
