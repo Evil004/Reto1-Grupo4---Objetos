@@ -35,5 +35,18 @@ public class EmployeeQuery {
             }
         }
     }
+    public static void employeeByDNI(int dni,ArrayList<Employee> employees) {
+
+        while (true) {
+          //  String dni = Util.Utilities.leerCadena("Introduce el DNI del empleado a buscar: ");
+            for (Employee employee: employees) {
+                if (employee.dni.equals(dni)) {
+                    imprimirDatosEmpleado(employee);
+                    return;
+                }
+            }
+            System.out.println("No existe un empleado con ese DNI");
+        }
+    }
 
 }
