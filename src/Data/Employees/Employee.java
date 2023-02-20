@@ -1,7 +1,7 @@
 package Data.Employees;
 
-public class Employees {
-    public class Empleado {
+public class Employee {
+
 
         int id;
         String dni;
@@ -11,12 +11,12 @@ public class Employees {
         String cuenta;
         int nss;
         String antiguedad;
-        String catGrupProfesional;
+        public String catGrupProfesional;
         int grupCotizacion;
         String email;
         int departamento;
 
-        public Empleado ( int id, String dni, String nombre, String apellido1, String apellido2, String cuenta, int nss, String antiguedad, String catGrupProfesional, int grupCotizacion, String email, int departamento) {
+        public Employee(int id, String dni, String nombre, String apellido1, String apellido2, String cuenta, int nss, String antiguedad, String catGrupProfesional, int grupCotizacion, String email, int departamento) {
             this.id = id;
             this.dni = dni;
             this.nombre = nombre;
@@ -30,5 +30,4 @@ public class Employees {
             this.email = email;
             this.departamento = departamento;
         }
-    }
 }
