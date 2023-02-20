@@ -8,4 +8,12 @@ public class EmployeesData {
     public EmployeesData(ArrayList<Employee> employees) {
         this.employees = employees;
     }
+
+    public EmployeesData() {
+        this.employees = new ArrayList<>();
+    }
+
+    public void addEmployee(Employee employee) {
+        employees.add(employee);
+    }
 }
