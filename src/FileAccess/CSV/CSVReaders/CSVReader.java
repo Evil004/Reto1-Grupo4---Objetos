@@ -1,7 +1,5 @@
 package FileAccess.CSV.CSVReaders;
 
-import Util.Utilities;
-
 import java.io.*;
 import java.util.ArrayList;
 
@@ -28,7 +26,7 @@ public abstract class CSVReader {
 			while (line != null){
 				dataReaded = line.split(";");
 
-				ArrayList<String> dataLine = Utilities.arrayToArrayList(dataReaded);
+				//ArrayList<String> dataLine = Utilities.arrayToArrayList(dataReaded);
 
 
 			}
