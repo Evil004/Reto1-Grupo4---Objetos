@@ -3,7 +3,7 @@ package Data.Departments;
  * @author Jonathan Taban
  * This class stores the Departments.
  */
-public class Department  {
+public class Department {
 
     int id;
     String name;

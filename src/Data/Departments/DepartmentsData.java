@@ -16,7 +16,7 @@ public class DepartmentsData {
         this.departments = new ArrayList<>();
     }
 
-    public void addDepartment(Departments department) {
+    public void addDepartment(Department department) {
         departments.add(department);
     }
 }

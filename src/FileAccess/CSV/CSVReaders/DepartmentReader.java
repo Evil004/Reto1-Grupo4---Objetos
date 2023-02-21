@@ -1,6 +1,6 @@
 package FileAccess.CSV.CSVReaders;
 
-import Data.Departments.Departments;
+import Data.Departments.Department;
 import Data.Departments.DepartmentsData;
 
 import java.io.File;
@@ -27,7 +27,7 @@ public class DepartmentReader extends CSVReader {
 			int id = Integer.parseInt(departmentData.get(0));
 			String nombre = departmentData.get(1);
 
-			Departments department = new Departments(id, nombre);
+			Department department = new Department(id, nombre);
 
 			departmentsData.addDepartment(department);
 		}
