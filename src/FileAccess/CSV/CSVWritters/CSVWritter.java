@@ -17,9 +17,8 @@ public abstract class CSVWritter implements IWritteable {
         ArrayList<ArrayList<String>> data = new ArrayList<>();
 
         try {
-            BufferedWriter streamReader = new BufferedWriter(new Writter(file));
-            streamReader.readLine();
-            String line = streamReader.readLine();
+            BufferedWriter streamWritter = new BufferedWriter(new FileWriter(file));
+            streamWritter.newLine();
             String[] dataReaded;
 
             while (line != null){
@@ -29,10 +28,10 @@ public abstract class CSVWritter implements IWritteable {
 
                 data.add(dataLine);
 
-                line = streamReader.readLine();
+                line = streamWritter.readLine();
 
             }
-            streamReader.close();
+            streamWritter.close();
 
 
         } catch (IOException e) {
