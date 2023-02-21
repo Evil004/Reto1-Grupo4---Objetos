@@ -25,7 +25,7 @@ public class ExtraHours {
                 '}';
     }
 
-    public int getStartHour() {
+    public int getStartTime() {
         return startHour;
     }
 
