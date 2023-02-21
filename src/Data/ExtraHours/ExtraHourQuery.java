@@ -5,6 +5,10 @@ import static Util.Utilities.*;
 import Data.Employees.Employee;
 import Data.Employees.EmployeesData;
 
+/**
+ * @author Pere Prior
+ */
+
 public class ExtraHourQuery{
 
     //QUERY
@@ -15,9 +19,9 @@ public class ExtraHourQuery{
 
                 if (hour.nif.equals(dni)) {
                     for (Employee employee: EmployeesData.getEmployees()) {
-                        if (employee.getDni().equals(dni)) {
-                            int hours = (hour.getEndTime() - hour.getStartHour());
-                            System.out.println(employee.getName() + " worked " + hours + " extra hours");
+                        if (employee.getDni().equals(nif)) {
+                            int hours = (hour.getEndTime() - hour.getStartTime());
+                            System.out.println(employee.getNombre() + " worked " + hours + " extra hours");
                             return;
                         }
                     }
