@@ -15,4 +15,8 @@ public class ExtraHoursData {
     }
 
     private static ArrayList<ExtraHours> extraHours = new ArrayList<>();
+
+	public void addExtraHour(ExtraHours extraHour) {
+		extraHours.add(extraHour);
+	}
 }

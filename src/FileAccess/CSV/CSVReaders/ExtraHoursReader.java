@@ -1,6 +1,7 @@
 package FileAccess.CSV.CSVReaders;
 
 import Data.ExtraHours.ExtraHours;
+import Data.ExtraHours.ExtraHoursData;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -23,12 +24,13 @@ public class ExtraHoursReader extends CSVReader {
 
 		for (ArrayList<String> extraHourData : extraHoursDataString) {
 
-			int id = Integer.parseInt(extraHourData.get(0));
-			int idEmpleado = Integer.parseInt(extraHourData.get(1));
-			String fecha = extraHourData.get(2);
-			int horas = Integer.parseInt(extraHourData.get(3));
+			String nif = extraHourData.get(0);
+			String date = extraHourData.get(1);
+			int startHour = Integer.parseInt(extraHourData.get(2));
+			int endHour = Integer.parseInt(extraHourData.get(3));
+			int place = Integer.parseInt(extraHourData.get(4));
 
-			ExtraHours extraHour = new ExtraHours(id, idEmpleado, fecha, horas);
+			ExtraHours extraHour = new ExtraHours(nif, date, startHour, endHour, place);
 
 			extraHoursData.addExtraHour(extraHour);
 		}

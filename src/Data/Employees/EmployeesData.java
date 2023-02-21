@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Contains the data about employees
  */
 public class EmployeesData {
-    static ArrayList<Employee> employees;
+    private static ArrayList<Employee> employees;
 
     public EmployeesData(ArrayList<Employee> employees) {
         this.employees = employees;
@@ -24,5 +24,13 @@ public class EmployeesData {
 
     public void addEmployee(Employee employee) {
         employees.add(employee);
+    }
+
+    public static int getLastId(){
+        if (employees.size() != 0) {
+            return employees.get(employees.size()-1).getId();
+
+        }
+        return 0;
     }
 }
