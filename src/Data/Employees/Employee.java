@@ -31,6 +31,10 @@ public class Employee {
             this.departamento = departamento;
         }
 
+        public String toString(){
+            return "ID: " + id + " DNI: " + dni + " Nombre: " + nombre + " Apellido1: " + apellido1 + " Apellido2: " + apellido2 + " Cuenta: " + cuenta + " NSS: " + nss + " Antiguedad: " + antiguedad + " CatGrupProfesional: " + catGrupProfesional + " GrupCotizacion: " + grupCotizacion + " Email: " + email + " Departamento: " + departamento;
+        }
+
     public int getId() {
         return id;
     }
