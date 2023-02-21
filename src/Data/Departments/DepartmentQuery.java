@@ -24,24 +24,24 @@ public class DepartmentQuery {
         }
         return numEmpleados;
     }
-/*
-public static void consultarCosteSalarialDepartamento() {
-        int idDepartamento = leerEntero("Introduce el ID del departamento");
 
-        for (Departamento departamento: departamentos) {
+public static void consultSalaryCostFromDepartment() {
+        int idDepartamento = Utilities.readNumber("Introduce el ID del departamento");
+
+        for (Department department: DepartmentsData.getDepartments()) {
             int costeDepartamento = 0;
-            if (departamento.id == idDepartamento) {
+            if (department.getId() == idDepartamento) {
 
-                for (Empleado empleado: empleados) {
-                    if (empleado.departamento == idDepartamento) {
-                        for (GrupoCotizacion grupoCotizacion: gruposCotizacion) {
-                            if (empleado.grupCotizacion == grupoCotizacion.id) {
-                                costeDepartamento += grupoCotizacion.sueldoBase;
+                for (Employee employee: EmployeesData.getEmployees()) {
+                    if (employee.getDepartamento() == idDepartamento) {
+                        for (QuoteGroup quoteGroup: QuoteGroupsData.getQuoteGroups()) {
+                            if (employee.getGrupCotizacion() == quoteGroup.getId()) {
+                                costeDepartamento += quoteGroup.getSalaryBase();
                             }
                         }
                     }
                 }
-                System.out.println("El departamento " + departamento.nombre + " tiene un coste salarial de: " + costeDepartamento + "€");
+                System.out.println("El departamento " + department.name + " tiene un coste salarial de: " + costeDepartamento + "€");
 
             }
         }
@@ -55,14 +55,14 @@ public static void consultarCosteSalarialDepartamento() {
             if (employee.getDepartamento() == idDepartamento) {
                 for (QuoteGroup quoteGroup: quoteGroups) {
                     if (employee.getGrupCotizacion() == quoteGroup.getId()) {
-                        costeDepartamento += quoteGroup.salaryBase;
+                        costeDepartamento += quoteGroup.getSalaryBase();
                     }
                 }
             }
         }
         return costeDepartamento;
     }
-    */
+
 }
 
 
