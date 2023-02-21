@@ -22,4 +22,8 @@ public class QuoteGroup {
     public void getSalaryBase(float salaryBase){
         this.salaryBase = salaryBase;
     }
+
+    public String toString(){
+        return "ID: " + id + " Salary Base: " + salaryBase;
+    }
 }
