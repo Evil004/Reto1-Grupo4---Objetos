@@ -24,8 +24,8 @@ public class DepartmentQuery {
         }
         return numEmpleados;
     }
-
-   /* public static void consultarCosteSalarialDepartamento() {
+/*
+public static void consultarCosteSalarialDepartamento() {
         int idDepartamento = leerEntero("Introduce el ID del departamento");
 
         for (Departamento departamento: departamentos) {
@@ -54,15 +54,14 @@ public class DepartmentQuery {
         for (Employee employee: employees) {
             if (employee.getDepartamento() == idDepartamento) {
                 for (QuoteGroup quoteGroup: quoteGroups) {
-                    if (employee.getGrupCotizacion() == grupoCotizacion.id) {
-                        costeDepartamento += grupoCotizacion.sueldoBase;
+                    if (employee.getGrupCotizacion() == quoteGroup.getId()) {
+                        costeDepartamento += quoteGroup.salaryBase;
                     }
                 }
             }
         }
         return costeDepartamento;
     }
-
     */
 }
 
