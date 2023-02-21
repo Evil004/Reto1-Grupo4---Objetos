@@ -28,4 +28,13 @@ public class QuoteGroupsData {
     public void addEmployee(QuoteGroup quoteGroup) {
         quoteGroups.add(quoteGroup);
     }
+
+    /**
+     * author: Óscar Fernández
+     * adds a quoteGroup to the quoteGroups list
+     * @param quoteGroup the quoteGroup to add
+     */
+	public void addQuoteGroup(QuoteGroup quoteGroup) {
+        quoteGroups.add(quoteGroup);
+	}
 }

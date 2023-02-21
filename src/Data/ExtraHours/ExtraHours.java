@@ -16,13 +16,7 @@ public class ExtraHours {
 
     @Override
     public String toString() {
-        return "Extra Hours: {" +
-                "nif: '" + nif + '\'' +
-                ", date: '" + date + '\'' +
-                ", Start hour: " + startHour +
-                ", End hour: " + endTime +
-                ", Place: " + place +
-                '}';
+        return "NIF: " + nif + " Date: " + date + " Start Hour: " + startHour + " End Hour: " + endTime + " Place: " + place;
     }
 
     public int getStartTime() {
