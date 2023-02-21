@@ -19,4 +19,12 @@ public class DepartmentsData {
     public void addDepartment(Department department) {
         departments.add(department);
     }
+
+    /**
+     * author: Óscar Fernández
+     * @return the departments
+     */
+    public static ArrayList<Department> getDepartments(){
+        return departments;
+    }
 }
