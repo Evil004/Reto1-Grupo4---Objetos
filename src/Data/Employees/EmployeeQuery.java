@@ -1,23 +1,19 @@
 package Data.Employees;
 import java.util.ArrayList;
 
-import Data.Departments.Department;
-import Data.Departments.DepartmentsData;
-import Util.Utilities;
-
 
 public class EmployeeQuery {
     public static void imprimirDatosEmpleado(Employee employee) {
 
         System.out.println("\n");
-        System.out.println("Id: " + employee.id);
-        System.out.println("DNI: " + employee.dni);
-        System.out.println("Nombre: " + employee.nombre);
-        System.out.println("Apellidos: " + employee.apellido1 + " " + employee.apellido2);
-        System.out.println("Cuenta: " + employee.cuenta);
-        System.out.println("Antiguedad: " + employee.antiguedad);
-        System.out.println("Categoria Grupo Profesional: " + employee.catGrupProfesional);
-        System.out.println("Grupo cotizacion: " + employee.grupCotizacion);
+        System.out.println("Id: " + employee.getId());
+        System.out.println("DNI: " + employee.getDni());
+        System.out.println("Nombre: " + employee.getName());
+        System.out.println("Apellidos: " + employee.getSurname1() + " " + employee.getSurname2());
+        System.out.println("Cuenta: " + employee.getAccount());
+        System.out.println("Antiguedad: " + employee.getSeniority());
+        System.out.println("Categoria Grupo Profesional: " + employee.getGroupProfCat());
+        System.out.println("Grupo cotizacion: " + employee.getQuoteGroup());
 /*
         for (Departamento departamento: departamentos) {
 
@@ -27,7 +23,7 @@ public class EmployeeQuery {
 
             }
         }*/
-        System.out.println("Email: " + employee.email);
+        System.out.println("Email: " + employee.getEmail());
 
     }
     public void employeeByCategory(String Category){
@@ -35,7 +31,7 @@ public class EmployeeQuery {
         System.out.println("A1 - A2 - A3 - B1 - B2 -B3");
         String categoria = Util.Utilities.readLine("Introduce la categoria de la que obtener los employees: ");
         for (Employee employee: employees) {
-            if (employee.catGrupProfesional.equals(categoria)) {
+            if (employee.getGroupProfCat().equals(categoria)) {
                 imprimirDatosEmpleado(employee);
             }
         }
@@ -45,7 +41,7 @@ public class EmployeeQuery {
 
         while (true) {
             for (Employee employee: employees) {
-                if (employee.dni.equals(dni)) {
+                if (employee.getDni().equals(dni)) {
                     imprimirDatosEmpleado(employee);
                     return;
                 }
@@ -57,7 +53,7 @@ public class EmployeeQuery {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
         while (true) {
             for (Employee employee: employees) {
-                if (employee.id == ID) {
+                if (employee.getId() == ID) {
                     imprimirDatosEmpleado(employee);
                     return;
                 }

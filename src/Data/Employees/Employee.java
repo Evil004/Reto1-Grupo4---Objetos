@@ -3,32 +3,32 @@ package Data.Employees;
 public class Employee {
 
 
-        int id;
-        String dni;
-        String nombre;
-        String apellido1;
-        String apellido2;
-        String cuenta;
-        int nss;
-        String antiguedad;
-        public String catGrupProfesional;
-        int grupCotizacion;
-        String email;
-        int departamento;
+        private int id;
+        private String dni;
+        private String name;
+        private String surname1;
+        private String surname2;
+        private String account;
+        private int nss;
+        private String seniority;
+        private  String groupProfCat;
+        private int quoteGroup;
+        private String email;
+        private int department;
 
         public Employee(int id, String dni, String nombre, String apellido1, String apellido2, String cuenta, int nss, String antiguedad, String catGrupProfesional, int grupCotizacion, String email, int departamento) {
             this.id = id;
             this.dni = dni;
-            this.nombre = nombre;
-            this.apellido1 = apellido1;
-            this.apellido2 = apellido2;
-            this.cuenta = cuenta;
+            this.name = nombre;
+            this.surname1 = apellido1;
+            this.surname2 = apellido2;
+            this.account = cuenta;
             this.nss = nss;
-            this.antiguedad = antiguedad;
-            this.catGrupProfesional = catGrupProfesional;
-            this.grupCotizacion = grupCotizacion;
+            this.seniority = antiguedad;
+            this.groupProfCat = catGrupProfesional;
+            this.quoteGroup = grupCotizacion;
             this.email = email;
-            this.departamento = departamento;
+            this.department = departamento;
         }
 
     public int getId() {
@@ -39,44 +39,44 @@ public class Employee {
         return dni;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public String getApellido1() {
-        return apellido1;
+    public String getSurname1() {
+        return surname1;
     }
 
-    public String getApellido2() {
-        return apellido2;
+    public String getSurname2() {
+        return surname2;
     }
 
-    public String getCuenta() {
-        return cuenta;
+    public String getAccount() {
+        return account;
     }
 
     public int getNss() {
         return nss;
     }
 
-    public String getAntiguedad() {
-        return antiguedad;
+    public String getSeniority() {
+        return seniority;
     }
 
-    public String getCatGrupProfesional() {
-        return catGrupProfesional;
+    public String getGroupProfCat() {
+        return groupProfCat;
     }
 
-    public int getGrupCotizacion() {
-        return grupCotizacion;
+    public int getQuoteGroup() {
+        return quoteGroup;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public int getDepartamento() {
-        return departamento;
+    public int getDepartment() {
+        return department;
     }
 
 }

@@ -17,7 +17,7 @@ public class ExtraHourQuery{
                     for (Employee employee: EmployeesData.getEmployees()) {
                         if (employee.getDni().equals(dni)) {
                             int hours = (hour.getEndTime() - hour.getStartHour());
-                            System.out.println(employee.getNombre() + " worked " + hours + " extra hours");
+                            System.out.println(employee.getName() + " worked " + hours + " extra hours");
                             return;
                         }
                     }
