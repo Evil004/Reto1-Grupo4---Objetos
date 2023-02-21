@@ -2,10 +2,10 @@ package Data.QuoteGroup;
 
 public class QuoteGroup {
     int id;
-    float sueldoBase;
+    float salaryBase;
 
-    public QuoteGroup(int id, float sueldoBase) {
+    public QuoteGroup(int id, float salaryBase) {
         this.id = id;
-        this.sueldoBase = sueldoBase;
+        this.salaryBase = salaryBase;
     }
 }

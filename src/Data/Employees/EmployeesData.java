@@ -2,6 +2,10 @@ package Data.Employees;
 
 import java.util.ArrayList;
 
+/**
+ * @author Jose Vicente Ebri
+ * Contains the data about employees
+ */
 public class EmployeesData {
     static ArrayList<Employee> employees;
 
