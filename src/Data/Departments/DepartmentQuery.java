@@ -18,7 +18,7 @@ public class DepartmentQuery {
         int numEmpleados = 0;
         for (Employee employee: employees) {
 
-            if (employee.getDepartamento() == idDep) {
+            if (employee.getDepartment() == idDep) {
                 numEmpleados++;
             }
         }

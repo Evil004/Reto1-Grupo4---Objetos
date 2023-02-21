@@ -32,7 +32,7 @@ public class Employee {
         }
 
         public String toString(){
-            return "ID: " + id + " DNI: " + dni + " Nombre: " + nombre + " Apellido1: " + apellido1 + " Apellido2: " + apellido2 + " Cuenta: " + cuenta + " NSS: " + nss + " Antiguedad: " + antiguedad + " CatGrupProfesional: " + catGrupProfesional + " GrupCotizacion: " + grupCotizacion + " Email: " + email + " Departamento: " + departamento;
+            return "ID: " + id + " DNI: " + dni + " Nombre: " + name + " Apellido1: " + surname1 + " Apellido2: " + surname2 + " Cuenta: " + account + " NSS: " + nss + " Antiguedad: " + seniority + " CatGrupProfesional: " + groupProfCat + " GrupCotizacion: " + quoteGroup + " Email: " + email + " Departamento: " + department;
         }
 
     public int getId() {
