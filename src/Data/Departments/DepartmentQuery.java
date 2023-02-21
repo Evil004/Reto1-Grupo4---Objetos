@@ -7,8 +7,6 @@ import Data.Employees.EmployeesData;
 
 import java.util.ArrayList;
 
-import static Data.Employees.EmployeesData.employees;
-
 /**
  * autor/es: Jonathan Taban
  * Count the Employees on Department
@@ -27,7 +25,7 @@ public class DepartmentQuery {
         return numEmpleados;
     }
 
-    public static void consultarCosteSalarialDepartamento() {
+   /* public static void consultarCosteSalarialDepartamento() {
         int idDepartamento = leerEntero("Introduce el ID del departamento");
 
         for (Departamento departamento: departamentos) {
@@ -51,12 +49,12 @@ public class DepartmentQuery {
 
     private static int getDepartmentCost(int idDepartamento, int costeDepartamento) {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
-        ArrayList<QuoteGroup> quoteGroups = QuoteGroupsData.getQuotegroup();
+        ArrayList<QuoteGroup> quoteGroups = QuoteGroupsData.getQuoteGroups();
 
         for (Employee employee: employees) {
             if (employee.getDepartamento() == idDepartamento) {
-                for (QuoteGroup quoteGroup: ) {
-                    if (empleado.grupCotizacion == grupoCotizacion.id) {
+                for (QuoteGroup quoteGroup: quoteGroups) {
+                    if (employee.getGrupCotizacion() == grupoCotizacion.id) {
                         costeDepartamento += grupoCotizacion.sueldoBase;
                     }
                 }
@@ -64,6 +62,8 @@ public class DepartmentQuery {
         }
         return costeDepartamento;
     }
+
+    */
 }
 
 
