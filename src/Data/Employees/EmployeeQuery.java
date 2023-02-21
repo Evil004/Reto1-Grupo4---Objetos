@@ -1,5 +1,8 @@
 package Data.Employees;
 import java.util.ArrayList;
+
+import Data.Departments.Department;
+import Data.Departments.DepartmentsData;
 import Util.Utilities;
 
 
@@ -63,5 +66,28 @@ public class EmployeeQuery {
         }
 
     }
+   /* public static void buscarEmpleadoPorDepartamento(int idDep) {
+        ArrayList<Employee> employees = EmployeesData.getEmployees();
+        //ArrayList<Department> departments = DepartmentsData.getDepartments();
 
+        while (true) {
+            boolean flag = false;
+            for (Employee employee: employees) {
+                if (employee.departamento == idDep) {
+                    for (Department department: departments) {
+                        if (department.id == idDep) {
+                            flag = true;
+                            System.out.printf("ID: %-12s Empleado: %-12s Departamento: %-12s \n", employee.id, employee.nombre, departments.get(departments.indexOf(department)).name);
+                        }
+                    }
+
+                }
+            }
+            if (flag) {
+                return;
+            }
+            System.out.println("No se ha encontrado un departamento con ese id");
+        }
+
+    }*/
 }

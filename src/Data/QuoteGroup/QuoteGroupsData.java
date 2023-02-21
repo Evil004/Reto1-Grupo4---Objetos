@@ -13,16 +13,16 @@ public class QuoteGroupsData {
     static ArrayList<QuoteGroup> quoteGroups;
 
     public QuoteGroupsData(ArrayList<QuoteGroup> quoteGroups) {
-        this.quoteGroups = quoteGroups;
+        QuoteGroupsData.quoteGroups = quoteGroups;
     }
 
-    public static ArrayList<QuoteGroup> getEmployees() {
+    public static ArrayList<QuoteGroup> getQuoteGroups() {
 
         return quoteGroups;
     }
 
     public QuoteGroupsData() {
-        this.quoteGroups = new ArrayList<>();
+        quoteGroups = new ArrayList<>();
     }
 
     public void addEmployee(QuoteGroup quoteGroup) {
