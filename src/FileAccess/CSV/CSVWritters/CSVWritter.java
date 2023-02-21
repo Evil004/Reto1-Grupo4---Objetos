@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public abstract class CSVWritter implements IWritteable {
 
-    public ArrayList<ArrayList<String>> writeFile(){
+    /*public ArrayList<ArrayList<String>> writeFile(){
         ArrayList<ArrayList<String>> data = new ArrayList<>();
 
         try {
@@ -40,7 +40,7 @@ public abstract class CSVWritter implements IWritteable {
         }
 
         return data;
-    }
+    }*/
 
     public CSVWritter(File file){
         this.file = file;
