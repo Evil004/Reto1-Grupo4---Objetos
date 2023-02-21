@@ -25,6 +25,10 @@ public class DepartmentQuery {
         return numEmpleados;
     }
 
+    /**
+     * autor/es: Jonathan Taban
+     * Consult the salary cost from department
+     */
 public static void consultSalaryCostFromDepartment() {
         int idDepartamento = Utilities.readNumber("Introduce el ID del departamento");
 
@@ -63,6 +67,22 @@ public static void consultSalaryCostFromDepartment() {
         return costeDepartamento;
     }
 
+    /**
+     * autor/es: Jonathan Taban
+     * Number of employees by department
+     */
+    public static void NumberOfEmployeesByDepartment() {
+
+        if (DepartmentsData.getDepartments().size() > 0) {
+            for (Department department: DepartmentsData.getDepartments()) {
+                System.out.println("Hay " + countEmployeeOnDep(department.getId()) + " empleados en el departamento " + department.name);
+            }
+
+        } else {
+            System.out.println("No se han encontrado departamentos");
+        }
+
+    }
 }
 
 
