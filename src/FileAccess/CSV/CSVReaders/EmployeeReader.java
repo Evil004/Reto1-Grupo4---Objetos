@@ -33,22 +33,23 @@ public class EmployeeReader extends CSVReader {
 		for (ArrayList<String> employeeData: employeesDataString) {
 
 			int id = EmployeesData.getLastId() + 1;
-			String dni = employeeData.get(1);
-			String nombre = employeeData.get(2);
-			String apellido1 = employeeData.get(3);
-			String apellido2 = employeeData.get(4);
-			String cuenta = employeeData.get(5);
+			String dni = employeeData.get(0);
+			String nombre = employeeData.get(1);
+			String apellido1 = employeeData.get(2);
+			String apellido2 = employeeData.get(3);
+			String cuenta = employeeData.get(4);
+			String antiguedad = employeeData.get(5);
+
 			int nss;
 			if (employeeData.get(6) == ""){
 				nss = 0;
 			} else {
 				nss = Integer.parseInt(employeeData.get(6));
 			}
-			String antiguedad = employeeData.get(7);
-			String catGrupProfesional = employeeData.get(8);
-			int grupCotizacion = Integer.parseInt(employeeData.get(9));
-			String email = employeeData.get(10);
-			int departamento = Integer.parseInt(employeeData.get(11));
+			String catGrupProfesional = employeeData.get(7);
+			int grupCotizacion = Integer.parseInt(employeeData.get(8));
+			String email = employeeData.get(9);
+			int departamento = Integer.parseInt(employeeData.get(10));
 
 
 			Employee employee = new Employee(id, dni, nombre, apellido1, apellido2, cuenta, nss, antiguedad, catGrupProfesional, grupCotizacion, email, departamento);
