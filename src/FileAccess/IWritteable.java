@@ -1,6 +1,8 @@
 package FileAccess;
 
-import java.util.ArrayList;
+/**
+ * @author Pere Prior
+ */
 
 public interface IWritteable {
     public void writeData();
