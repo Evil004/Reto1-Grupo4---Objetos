@@ -1,5 +1,7 @@
 package FileAccess;
 
+import java.util.ArrayList;
+
 public interface IWritteable {
-    public Object writeData();
+    public void writeData(ArrayList<ArrayList<String>> data);
 }
