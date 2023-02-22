@@ -8,6 +8,9 @@ import Data.Employees.EmployeesData;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * @author Óscar Fernandez
+ */
 public class EmployeeWritter extends CSVWritter {
 
 

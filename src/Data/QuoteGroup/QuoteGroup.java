@@ -2,7 +2,7 @@ package Data.QuoteGroup;
 
 public class QuoteGroup {
     private int id;
-    float salaryBase;
+    private float salaryBase;
 
     public QuoteGroup(int id, float salaryBase) {
         this.id = id;
@@ -19,11 +19,11 @@ public class QuoteGroup {
     public float getSalaryBase(){
         return salaryBase;
     }
-    public void getSalaryBase(float salaryBase){
-        this.salaryBase = salaryBase;
-    }
 
     public String toString(){
         return "ID: " + id + " Salary Base: " + salaryBase;
     }
+
+
+
 }
