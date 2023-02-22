@@ -1,4 +1,7 @@
 package Data.Departments;
+
+import java.util.ArrayList;
+
 /**
  * @author Jonathan Taban
  * This class stores the Departments.

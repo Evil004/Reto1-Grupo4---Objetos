@@ -1,11 +1,13 @@
 package FileAccess.CSV.CSVWritters;
 
-import Data.Employees.Employee;
-import Data.Employees.EmployeeQuery;
-import Data.Employees.EmployeesData;
-
+import Data.Departments.Department;
+import Data.Departments.DepartmentsData;
 import java.io.File;
-import static Util.Utilities.*;
+import java.util.ArrayList;
+
+/**
+ * @author Pere Prior
+ */
 
 public class DepartmentWritter extends CSVWritter{
 
@@ -18,7 +20,27 @@ public class DepartmentWritter extends CSVWritter{
     }
 
     @Override
-    public Object writeData() {
-        return null;
+    String getColumns() {
+        return DepartmentsData.getColumns();
+    }
+
+    @Override
+    public void writeData() {
+
+        ArrayList<ArrayList<String>> departmentsData = new ArrayList<>();
+
+        ArrayList<Department> department = DepartmentsData.getDepartments();
+
+        for (Department departments: department) {
+            ArrayList<String> departmentData = new ArrayList<>();
+
+            departmentData.add(String.valueOf(departments.getId()));
+            departmentData.add(departments.getName());
+
+            departmentsData.add(departmentData);
+        }
+
+        super.writeFile(departmentsData);
+
     }
 }

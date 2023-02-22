@@ -12,12 +12,12 @@ import Data.Employees.EmployeesData;
 public class ExtraHourQuery{
 
     //QUERY
-    public static void ExtraHourNIFQuery(String dni) {
+    public static void extraHourNIFQuery(String dni) {
         while (true) {
-            dni = readLine("Enter the NIF of the employee to search: ");
+            dni = readLine("Enter the NIF employee to search: ");
             for (ExtraHours hour: ExtraHoursData.getExtraHours()) {
 
-                if (hour.nif.equals(dni)) {
+                if (hour.getNif().equals(dni)) {
                     for (Employee employee: EmployeesData.getEmployees()) {
                         if (employee.getDni().equals(dni)) {
                             int hours = (hour.getEndTime() - hour.getStartTime());
@@ -34,37 +34,37 @@ public class ExtraHourQuery{
 
     }
 
-    /*public static void consultarHorasExtraID() {
-        String dniEmpleado = null;
-        Empleado empleado = null;
+    public static void extraHourIDQuery() {
+        String EmployeeNIF = null;
+        Employee employee = null;
 
         while (true) {
-            int idEmpleado = leerEntero("Introduce el ID del empleado: ");
+            int idEmpleado = readNumber("Enter the employee ID to search: ");
 
-            for (Empleado empleadoTemp: empleados) {
-                if (empleadoTemp.id == idEmpleado) {
-                    empleado = empleadoTemp;
-                    dniEmpleado = empleadoTemp.dni;
+            for (Employee employeeTemp: EmployeesData.getEmployees()) {
+                if (employeeTemp.getId() == idEmpleado) {
+                    employee = employeeTemp;
+                    EmployeeNIF = employeeTemp.getDni();
                 }
             }
-            if (dniEmpleado != null) {
+            if (EmployeeNIF != null) {
                 break;
             } else {
-                System.out.println("No se ha encontrado un empleado con ese ID.");
+                System.out.println("Doesn't exists a employee with this ID.");
 
             }
         }
 
 
-        for (ExtraHoursData hora: e) {
-            if (hora.nif.equals(dniEmpleado)) {
-                int horas = (hora.hora_f - hora.hora_i);
-                System.out.println(empleado.nombre + " ha realizado " + horas + " horas extra");
+        for (ExtraHours hora: ExtraHoursData.getExtraHours()) {
+            if (hora.nif.equals(EmployeeNIF)) {
+                int horas = (hora.getEndTime() - hora.getStartTime());
+                System.out.println(employee.getName() + " worked " + horas + " extra hours");
                 return;
             }
 
         }
-        System.out.println("Ese empleado no tiene horas extra.");
-    }*/
+        System.out.println("This employee doesn't have extra hours.");
+    }
 
 }
