@@ -89,7 +89,7 @@ public static void consultSalaryCostFromDepartment() {
      */
 
     public static void incorporateDepartment() {
-        boolean guardado = true;
+        boolean save = true;
 
         int id = DepartmentsData.getDepartments().get(DepartmentsData.getDepartments().size() - 1).getId() + 1;
         String name = Utilities.readLine("Introduce el nombre del departamento ");
@@ -98,60 +98,81 @@ public static void consultSalaryCostFromDepartment() {
         Department department = new Department(id, name);
         DepartmentsData.getDepartments().add(department);
         System.out.println("Se ha creado un nuevo departamento");
-        guardado = false;
+        save = false;
     }
 
-/*
-    public static void eliminarDatosDepartamento() {
-        int id = leerEntero("Introduce el ID del Departamento a eliminar: ");
+    /**
+     * autor/es: Jonathan Taban
+     * Delete the Departments Data
+     */
 
-        Departamento departamento = null;
+    public static void deleteDepartmentData() {
+        ArrayList<Department> departments = DepartmentsData.getDepartments();
 
-        for (int i = 0; i < departamentos.size(); i++) {
-            departamento = departamentos.get(i);
-            if (departamento.id == id) {
+        int id = Utilities.readNumber("Introduce el ID del Departamento a eliminar: ");
+
+        Department department = null;
+
+        for (int i = 0; i < departments.size(); i++) {
+            department = departments.get(i);
+            if (department.getId() == id) {
                 break;
             }
         }
-        if (departamento == null) {
+        if (department == null) {
             System.out.println("No se ha encontrado el departamento con el id " + id);
             return;
         }
 
-        int numEmpleados = contarEmpleadoEnDep(id);
+        Decision(id);
+
+    }
+
+    /**
+     * autor/es: Jonathan Taban
+     * ASks the user if he wants to delete a department
+     */
+
+    public static void Decision(int id){
+        ArrayList<Department> departments = DepartmentsData.getDepartments();
+        ArrayList<Employee> employees = EmployeesData.getEmployees();
+        Department department = null;
+        boolean save = true;
+
+        int numberOfEmployees = countEmployeeOnDep(id);
 
         while (true) {
-            String decision = leerCadena("Se va a eleminar el departamento " + departamento.nombre + ", estas seguro? (si, no)");
+            String decision = Utilities.readLine("Se va a eleminar el departamento " + department.name + ", estas seguro? (si, no)");
             switch (decision) {
                 case "si":
-                    if (numEmpleados <= 0) {
-                        departamentos.remove(departamento);
-                        guardado = false;
+                    if (numberOfEmployees <= 0) {
+                        departments.remove(department);
+                        save = false;
 
                         return;
                     }
 
-                    System.out.println("Vas a eliminar el departamento " + departamento.nombre + " que tiene " + numEmpleados + " empleados");
+                    System.out.println("Vas a eliminar el departamento " + department.name + " que tiene " + numberOfEmployees + " empleados");
 
                     while (true) {
-                        decision = leerCadena("Quieres continuar? (si/no) Si continuas se eliminaran todos los empleados en cascada");
+                        decision = Utilities.readLine("Quieres continuar? (si/no) Si continuas se eliminaran todos los empleados en cascada");
 
                         switch (decision) {
                             case "si":
 
-                                while (contarEmpleadoEnDep(id) > 0) {
-                                    for (int j = 0; j < empleados.size(); j++) {
-                                        Empleado empleado = empleados.get(j);
+                                while (countEmployeeOnDep(id) > 0) {
+                                    for (int j = 0; j < employees.size(); j++) {
+                                        Employee employee = employees.get(j);
 
-                                        if (empleado.departamento == id) {
-                                            empleados.remove(empleados.indexOf(empleado));
+                                        if (employee.getDepartment() == id) {
+                                            employees.remove(employees.indexOf(employee));
                                         }
 
                                     }
                                 }
 
-                                departamentos.remove(departamento);
-                                guardado = false;
+                                departments.remove(department);
+                                save = false;
                                 return;
                             case "no":
                                 System.out.println("Eliminacion cancelada");
@@ -167,14 +188,11 @@ public static void consultSalaryCostFromDepartment() {
                     return;
                 default:
                     System.out.println("Opcion no valida, introduzca una opcion valida.");
-                    esperarEnter();
-                    limpiarPantalla();
+                    Utilities.waitEnter();
+                    Utilities.cleanScreen();
             }
         }
-
-
     }
-    */
 }
 
 
