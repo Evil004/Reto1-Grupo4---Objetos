@@ -1,8 +1,8 @@
-package test;
 
 import Data.Departments.Department;
 import Data.Departments.DepartmentsData;
 import Data.Employees.Employee;
+import Data.Employees.EmployeeQuery;
 import Data.Employees.EmployeesData;
 import Data.ExtraHours.ExtraHours;
 import Data.ExtraHours.ExtraHoursData;
@@ -59,26 +59,12 @@ public class Main {
 			}
 
 		}
-
-		for (Employee employee: employees.getEmployees()) {
-			employee.setDni(employee.getDni() + "_");
-		}
+		EmployeeQuery.employeesByDepartment(1);
 
 
-		for (Department department: departments.getDepartments()) {
-			department.setName(department.getName() + "_");
-		}
 
-		System.out.println("adadf");
-		for (ExtraHours extraHour: extraHours.getExtraHours()) {
-			extraHour.setNif(extraHour.getNif() + "_");
-			System.out.println(extraHour);
-		}
 
-		for (QuoteGroup quoteGroup: quoteGroups.getQuoteGroups()) {
-			quoteGroup.setSalaryBase(quoteGroup.getSalaryBase() + 1);
 
-		}
 
 		for (File file: csvFolder.listFiles()) {
 			if (file.getName().equals(Settings.csvEmployees)) {

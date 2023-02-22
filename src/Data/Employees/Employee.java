@@ -1,5 +1,7 @@
 package Data.Employees;
 
+import Data.QuoteGroup.QuoteGroup;
+
 public class Employee {
 
 
@@ -130,5 +132,8 @@ public class Employee {
     public void setDepartment(int department) {
         this.department = department;
     }
+
+
+
 
 }

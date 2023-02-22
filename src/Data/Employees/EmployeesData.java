@@ -14,7 +14,7 @@ public class EmployeesData {
         this.employees = employees;
     }
 
-    public static ArrayList<Employee> getEmployees(){
+    public static ArrayList<Employee> getEmployees() {
 
         return employees;
     }
@@ -27,19 +27,32 @@ public class EmployeesData {
         employees.add(employee);
     }
 
-    public static int getLastId(){
+    public static Employee getEmployeeByID(int id) {
+        for (Employee employee : employees) {
+            if (employee.getId() == id) {
+                return employee;
+            }
+
+        }
+        return null;
+    }
+
+    public static int getLastId() {
         if (employees.size() != 0) {
-            return employees.get(employees.size()-1).getId();
+            return employees.get(employees.size() - 1).getId();
 
         }
         return 0;
     }
 
     public static String getColumns() {
-    	return columns;
+        return columns;
     }
 
     public static void setColumns(String columns) {
-    	EmployeesData.columns = columns;
+        EmployeesData.columns = columns;
+    }
+    public static void removeEmployee(Employee employee) {
+        employees.remove(employee);
     }
 }

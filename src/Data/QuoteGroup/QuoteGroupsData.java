@@ -30,6 +30,8 @@ public class QuoteGroupsData {
         quoteGroups.add(quoteGroup);
     }
 
+
+
     /**
      * author: Óscar Fernández
      * adds a quoteGroup to the quoteGroups list

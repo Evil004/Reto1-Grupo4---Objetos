@@ -1,5 +1,9 @@
 package Data.QuoteGroup;
 
+import Data.Employees.Employee;
+
+import static Data.Employees.EmployeesData.getEmployees;
+
 public class QuoteGroup {
     private int id;
     private float salaryBase;
@@ -29,3 +33,4 @@ public class QuoteGroup {
         this.salaryBase = salaryBase;
     }
 }
+

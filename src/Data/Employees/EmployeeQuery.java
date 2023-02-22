@@ -6,64 +6,42 @@ import java.util.ArrayList;
 
 
 public class EmployeeQuery {
-    public static void printEmployeeData(Employee employee) {
 
-        System.out.println("\n");
-        System.out.println("Id: " + employee.getId());
-        System.out.println("DNI: " + employee.getDni());
-        System.out.println("Nombre: " + employee.getName());
-        System.out.println("Apellidos: " + employee.getSurname1() + " " + employee.getSurname2());
-        System.out.println("Cuenta: " + employee.getAccount());
-        System.out.println("Antiguedad: " + employee.getSeniority());
-        System.out.println("Categoria Grupo Profesional: " + employee.getGroupProfCat());
-        System.out.println("Grupo cotizacion: " + employee.getQuoteGroup());
-/*
-        for (Departamento departamento: departamentos) {
-
-            if (departamento.id == employee.departamento) {
-
-                System.out.println("Departamento: " + departamento.nombre);
-
-            }
-        }*/
-        System.out.println("Email: " + employee.getEmail());
-
-    }
-    public void employeeByCategory(String Category){
+    public static void employeeByCategory(String Category){
         ArrayList<Employee> employees = EmployeesData.getEmployees();
         System.out.println("A1 - A2 - A3 - B1 - B2 -B3");
         String categoria = Util.Utilities.readLine("Introduce la categoria de la que obtener los employees: ");
         for (Employee employee: employees) {
             if (employee.getGroupProfCat().equals(categoria)) {
-                printEmployeeData(employee);
+                System.out.println(employee);;
             }
         }
     }
     public static void employeeByDNI(String dni) {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
 
-        while (true) {
+
             for (Employee employee: employees) {
                 if (employee.getDni().equals(dni)) {
-                    printEmployeeData(employee);
+                    System.out.println(employee);
                     return;
                 }
             }
             System.out.println("No existe un empleado con ese DNI");
-        }
+
     }
-    public static void employeeByID(int ID) {
+    public static Employee employeeByID(int ID) {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
-        while (true) {
+
             for (Employee employee: employees) {
                 if (employee.getId() == ID) {
-                    printEmployeeData(employee);
-                    return;
+                    System.out.println(employee);
+                    return employee;
                 }
             }
             System.out.println("No se ha encontrado un empleado con ese ID.");
-        }
 
+        return null;
     }
    public static void employeesByDepartment(int idDep) {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
@@ -97,6 +75,7 @@ public class EmployeeQuery {
     }
     private static Employee createEmployee() {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
+
         int id = employees.get(employees.size() - 1).getId() + 1;
         String dni = Utilities.readLine("Introduce el DNI del empleado: ");
         String nombre = Utilities.readLine("Introduce el nombre del empleado: ");
@@ -114,35 +93,45 @@ public class EmployeeQuery {
         return new Employee(id, dni, nombre, apellido1, apellido2, cuenta, nss, antiguedad, catGrupProfesional, grupCotizacion, email, departamento);
     }
 
-    /*public static void modifyPersonalData(int id) {
+    public static void modifyPersonalData(int id) {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
-        while (true) {
 
-            for (Employee employee: employees) {
-                if (id == employee.getId()) {
 
-                    printEmployeeData(employeeByID(id));
-                    System.out.println("...................");
+            Employee employeeToModify = EmployeesData.getEmployeeByID(id);
 
-                    System.out.println("\nIntroduce los datos modificados: \n");
-                    Employee employeeToModify = createEmployee();
+            Employee auxEmployee = createEmployee();
 
-                    employeeToModify.getId() = id;
-                    empleados.set(empleados.indexOf(buscarEmpleadoID(id)), empleadoAModificar);
+            employeeToModify.setDni(auxEmployee.getDni());
+            employeeToModify.setName(auxEmployee.getName());
+            employeeToModify.setSurname1(auxEmployee.getSurname1());
+            employeeToModify.setSurname2(auxEmployee.getSurname2());
+            employeeToModify.setAccount(auxEmployee.getAccount());
+            employeeToModify.setNss(auxEmployee.getNss());
+            employeeToModify.setSeniority(auxEmployee.getSeniority());
+            employeeToModify.setGroupProfCat(auxEmployee.getGroupProfCat());
+            employeeToModify.setQuoteGroup(auxEmployee.getQuoteGroup());
+            employeeToModify.setEmail(auxEmployee.getEmail());
+            employeeToModify.setDepartment(auxEmployee.getDepartment());
 
-                    imprimirDatosEmpleado(empleado);
-                    guardado = false;
 
-                    return;
+    }
+    public static void deleteEmployeeData(int id) {
+        Employee employee = EmployeesData.getEmployeeByID(id);
 
-                } else {
+        if (employee != null) {
+            System.out.println("Va a eliminar el empleado " + employee.getName());
+            String decision = Utilities.readLine("Quieres continuar? (si/no)");
 
-                    System.out.println("Opcion no valida.");
-
-                }
+            if (decision.equals("si")) {
+                EmployeesData.removeEmployee(employee);
+                System.out.println("Se ha eliminado el empleado");
+            } else if (decision.equals("no")) {
+                System.out.println("Eliminación cancelada");
+            } else {
+                System.out.println("Introduce una respuesta válida");
             }
-        }*/
-
-
-
+        } else {
+            System.out.println("No se ha encontrado ningún empleado con el id " + id);
+        }
+    }
 }
