@@ -14,8 +14,6 @@ public class ExtraHoursData {
 
     private static ArrayList<ExtraHours> extraHours = new ArrayList<>();
 
-	private static String columns;
-
 	public void addExtraHour(ExtraHours extraHour) {
 		extraHours.add(extraHour);
 	}
@@ -27,5 +25,7 @@ public class ExtraHoursData {
 	public static void setColumns(String columns) {
 		ExtraHoursData.columns = columns;
 	}
+
+	private static String columns;
 
 }

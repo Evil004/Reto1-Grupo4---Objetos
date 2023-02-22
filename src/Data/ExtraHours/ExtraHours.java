@@ -14,6 +14,10 @@ public class ExtraHours {
         this.place = place;
     }
 
+    public void setNif(String nif) {
+        this.nif = nif;
+    }
+
     @Override
     public String toString() {
         return "NIF: " + nif + " Date: " + date + " Start Hour: " + startHour + " End Hour: " + endTime + " Place: " + place;
@@ -39,13 +43,9 @@ public class ExtraHours {
         return nif;
     }
 
-    String nif;
-    String date;
-    int startHour;
-    int endTime;
-    int place;
-
-    public void setNif(String nif) {
-        this.nif = nif;
-    }
+    private String nif;
+    private String date;
+    private int startHour;
+    private int endTime;
+    private int place;
 }
