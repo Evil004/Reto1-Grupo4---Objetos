@@ -83,4 +83,52 @@ public class Employee {
         return department;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname1(String surname1) {
+        this.surname1 = surname1;
+    }
+
+    public void setSurname2(String surname2) {
+        this.surname2 = surname2;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
+    public void setNss(int nss) {
+        this.nss = nss;
+    }
+
+    public void setSeniority(String seniority) {
+        this.seniority = seniority;
+    }
+
+    public void setGroupProfCat(String groupProfCat) {
+        this.groupProfCat = groupProfCat;
+    }
+
+    public void setQuoteGroup(int quoteGroup) {
+        this.quoteGroup = quoteGroup;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setDepartment(int department) {
+        this.department = department;
+    }
+
 }
