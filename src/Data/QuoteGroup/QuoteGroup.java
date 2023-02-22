@@ -25,5 +25,7 @@ public class QuoteGroup {
     }
 
 
-
+    public void setSalaryBase(float salaryBase) {
+        this.salaryBase = salaryBase;
+    }
 }

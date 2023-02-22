@@ -45,4 +45,7 @@ public class ExtraHours {
     int endTime;
     int place;
 
+    public void setNif(String nif) {
+        this.nif = nif;
+    }
 }

@@ -76,16 +76,5 @@ public abstract class CSVReader implements IReadable {
 	 * Reads the file and returns the data in a ArrayList<ArrayList<String>>
 	 *     author: Óscar Fernández
 	 */
-	public String[] getColumnsNamesArray(){
-		String[] columnsNames;
-		try {
-			BufferedReader streamReader = new BufferedReader(new FileReader(file));
-			String line = streamReader.readLine();
-			columnsNames = line.split(";");
-			streamReader.close();
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
-		return columnsNames;
-	}
+
 }

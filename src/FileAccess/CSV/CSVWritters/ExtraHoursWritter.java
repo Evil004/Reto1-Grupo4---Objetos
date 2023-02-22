@@ -37,7 +37,7 @@ public class ExtraHoursWritter extends CSVWritter{
 
             extraHoursData.add(extraHourData);
         }
-
+        super.writeFile(extraHoursData);
     }
 
 

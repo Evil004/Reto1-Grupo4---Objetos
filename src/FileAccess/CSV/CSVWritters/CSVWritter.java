@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public abstract class CSVWritter implements IWritteable {
 
-    public void writeFile(ArrayList<ArrayList<String>> data){
+    void writeFile(ArrayList<ArrayList<String>> data){
 
         try {
             BufferedWriter streamWritter = new BufferedWriter(new FileWriter(file));
