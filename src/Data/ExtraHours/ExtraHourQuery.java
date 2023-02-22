@@ -38,22 +38,17 @@ public class ExtraHourQuery{
         String EmployeeNIF = null;
         Employee employee = null;
 
-        while (true) {
+        do {
             int idEmpleado = readNumber("Enter the employee ID to search: ");
 
-            for (Employee employeeTemp: EmployeesData.getEmployees()) {
+            for (Employee employeeTemp : EmployeesData.getEmployees()) {
                 if (employeeTemp.getId() == idEmpleado) {
                     employee = employeeTemp;
                     EmployeeNIF = employeeTemp.getDni();
                 }
             }
-            if (EmployeeNIF != null) {
-                break;
-            } else {
-                System.out.println("Doesn't exists a employee with this ID.");
-
-            }
-        }
+            System.out.println("Doesn't exists a employee with this ID.");
+        } while (EmployeeNIF == null);
 
 
         for (ExtraHours hora: ExtraHoursData.getExtraHours()) {
