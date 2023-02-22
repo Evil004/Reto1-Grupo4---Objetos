@@ -57,7 +57,7 @@ public class ExtraHourQuery{
 
 
         for (ExtraHours hora: ExtraHoursData.getExtraHours()) {
-            if (hora.nif.equals(EmployeeNIF)) {
+            if (hora.getNif().equals(EmployeeNIF)) {
                 int horas = (hora.getEndTime() - hora.getStartTime());
                 System.out.println(employee.getName() + " worked " + horas + " extra hours");
                 return;
