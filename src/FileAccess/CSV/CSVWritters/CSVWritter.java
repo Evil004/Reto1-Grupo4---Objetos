@@ -1,5 +1,6 @@
 package FileAccess.CSV.CSVWritters;
 
+import FileAccess.CSV.CSVReaders.CSVReader;
 import FileAccess.IReadable;
 import FileAccess.IWritteable;
 import Util.Utilities;
@@ -8,38 +9,28 @@ import java.io.*;
 import java.util.ArrayList;
 
 /**
- * @author Pere Prior
+ * @author Pere Prior, Óscar Fernández
  */
 
 public abstract class CSVWritter implements IWritteable {
 
-    /*public ArrayList<ArrayList<String>> writeFile(){
-        ArrayList<ArrayList<String>> data = new ArrayList<>();
+    public void writeFile(ArrayList<ArrayList<String>> data){
 
         try {
             BufferedWriter streamWritter = new BufferedWriter(new FileWriter(file));
-            streamWritter.newLine();
-            String[] dataReaded;
 
-            while (line != null){
-                dataReaded = line.split(";");
+            streamWritter.write(getColumns());
 
-                ArrayList<String> dataLine = Utilities.arrayToArrayList(dataReaded);
-
-                data.add(dataLine);
-
-                line = streamWritter.readLine();
-
+            for (ArrayList<String> line : data) {
+                streamWritter.newLine();
+                streamWritter.write(Utilities.arrayListToString(line, ";"));
             }
+
             streamWritter.close();
-
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        return data;
-    }*/
+    }
 
     public CSVWritter(File file){
         this.file = file;
@@ -49,5 +40,6 @@ public abstract class CSVWritter implements IWritteable {
         file = new File(path);
     }
 
+    abstract String getColumns();
     File file;
 }

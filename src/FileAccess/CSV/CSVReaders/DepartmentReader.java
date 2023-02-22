@@ -21,6 +21,8 @@ public class DepartmentReader extends CSVReader {
 		ArrayList<ArrayList<String>> departmentsDataString = super.readFile();
 
 		DepartmentsData departmentsData = new DepartmentsData();
+
+		DepartmentsData.setColumns(super.getColumnsNames());
 		
 		for (ArrayList<String> departmentData : departmentsDataString ) {
 

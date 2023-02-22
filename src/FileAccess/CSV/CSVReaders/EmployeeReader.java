@@ -30,6 +30,8 @@ public class EmployeeReader extends CSVReader {
 
 		EmployeesData employeesData = new EmployeesData();
 
+		EmployeesData.setColumns(super.getColumnsNames());
+
 		for (ArrayList<String> employeeData: employeesDataString) {
 
 			int id = EmployeesData.getLastId() + 1;

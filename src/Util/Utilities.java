@@ -103,4 +103,12 @@ public class Utilities {
         return -1;
     }
 
+	public static String arrayListToString(ArrayList<String> line, String separator) {
+        String str = "";
+        for (String field : line) {
+            str = str.concat(field + separator);
+        }
+        str = str.substring(0, str.length() - 1);
+        return str;
+	}
 }

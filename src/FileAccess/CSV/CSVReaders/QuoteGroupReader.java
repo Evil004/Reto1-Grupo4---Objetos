@@ -22,6 +22,8 @@ public class QuoteGroupReader extends CSVReader{
 
 		QuoteGroupsData quoteGroupsData = new QuoteGroupsData();
 
+		QuoteGroupsData.setColumns(super.getColumnsNames());
+
 		for (ArrayList<String> quoteGroupData : quoteGroupsDataString ) {
 
 			int id = Integer.parseInt(quoteGroupData.get(0));

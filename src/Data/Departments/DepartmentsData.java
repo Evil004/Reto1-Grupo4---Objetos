@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class DepartmentsData {
     private static ArrayList<Department> departments = new ArrayList<>();
+    private static String columns;
 
     public DepartmentsData(ArrayList<Department> departments){
         this.departments = departments;
@@ -26,5 +27,13 @@ public class DepartmentsData {
      */
     public static ArrayList<Department> getDepartments(){
         return departments;
+    }
+
+    public static String getColumns() {
+    	return columns;
+    }
+
+    public static void setColumns(String columns) {
+    	DepartmentsData.columns = columns;
     }
 }

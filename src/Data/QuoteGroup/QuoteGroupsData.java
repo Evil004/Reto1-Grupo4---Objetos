@@ -10,7 +10,8 @@ import java.util.ArrayList;
  * Contains data about QuoteGroups
  */
 public class QuoteGroupsData {
-    static ArrayList<QuoteGroup> quoteGroups;
+    private static ArrayList<QuoteGroup> quoteGroups;
+    private static String columns;
 
     public QuoteGroupsData(ArrayList<QuoteGroup> quoteGroups) {
         QuoteGroupsData.quoteGroups = quoteGroups;
@@ -37,4 +38,13 @@ public class QuoteGroupsData {
 	public void addQuoteGroup(QuoteGroup quoteGroup) {
         quoteGroups.add(quoteGroup);
 	}
+
+    public static String getColumns() {
+    	return columns;
+    }
+
+    public static void setColumns(String columns) {
+    	QuoteGroupsData.columns = columns;
+    }
+
 }

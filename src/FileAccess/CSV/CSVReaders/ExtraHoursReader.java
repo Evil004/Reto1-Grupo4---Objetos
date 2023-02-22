@@ -22,6 +22,8 @@ public class ExtraHoursReader extends CSVReader {
 
 		ExtraHoursData extraHoursData = new ExtraHoursData();
 
+		ExtraHoursData.setColumns(super.getColumnsNames());
+
 		for (ArrayList<String> extraHourData : extraHoursDataString) {
 
 			String nif = extraHourData.get(0);

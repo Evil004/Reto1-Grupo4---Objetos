@@ -8,6 +8,7 @@ import java.util.ArrayList;
  */
 public class EmployeesData {
     private static ArrayList<Employee> employees;
+    private static String columns;
 
     public EmployeesData(ArrayList<Employee> employees) {
         this.employees = employees;
@@ -32,5 +33,13 @@ public class EmployeesData {
 
         }
         return 0;
+    }
+
+    public static String getColumns() {
+    	return columns;
+    }
+
+    public static void setColumns(String columns) {
+    	EmployeesData.columns = columns;
     }
 }
