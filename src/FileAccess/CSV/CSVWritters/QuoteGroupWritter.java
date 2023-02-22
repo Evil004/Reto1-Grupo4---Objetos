@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 /**
  * @author Óscar Fernandez
+ *
  */
 public class QuoteGroupWritter extends CSVWritter {
 
