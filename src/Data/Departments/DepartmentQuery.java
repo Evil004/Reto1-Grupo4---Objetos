@@ -37,9 +37,9 @@ public static void consultSalaryCostFromDepartment() {
             if (department.getId() == idDepartamento) {
 
                 for (Employee employee: EmployeesData.getEmployees()) {
-                    if (employee.getDepartamento() == idDepartamento) {
+                    if (employee.getDepartment() == idDepartamento) {
                         for (QuoteGroup quoteGroup: QuoteGroupsData.getQuoteGroups()) {
-                            if (employee.getGrupCotizacion() == quoteGroup.getId()) {
+                            if (employee.getQuoteGroup() == quoteGroup.getId()) {
                                 costeDepartamento += quoteGroup.getSalaryBase();
                             }
                         }
@@ -56,9 +56,9 @@ public static void consultSalaryCostFromDepartment() {
         ArrayList<QuoteGroup> quoteGroups = QuoteGroupsData.getQuoteGroups();
 
         for (Employee employee: employees) {
-            if (employee.getDepartamento() == idDepartamento) {
+            if (employee.getDepartment() == idDepartamento) {
                 for (QuoteGroup quoteGroup: quoteGroups) {
-                    if (employee.getGrupCotizacion() == quoteGroup.getId()) {
+                    if (employee.getQuoteGroup() == quoteGroup.getId()) {
                         costeDepartamento += quoteGroup.getSalaryBase();
                     }
                 }
