@@ -134,4 +134,33 @@ public class EmployeeQuery {
             System.out.println("No se ha encontrado ningún empleado con el id " + id);
         }
     }
+
+    /**
+     * autor/es: Jonathan Taban
+     * Print all the Employees Data
+     */
+    public static void printEmployeesData(Employee employee) {
+        ArrayList<Department> departments = DepartmentsData.getDepartments();
+
+        System.out.println("\n");
+        System.out.println("Id: " + employee.getId());
+        System.out.println("DNI: " + employee.getDni());
+        System.out.println("Name: " + employee.getName());
+        System.out.println("Surnames: " + employee.getSurname1() + " " + employee.getSurname2());
+        System.out.println("Account: " + employee.getAccount());
+        System.out.println("Seniority: " + employee.getSeniority());
+        System.out.println("Profesional Group Category: " + employee.getGroupProfCat());
+        System.out.println("Quote Group: " + employee.getQuoteGroup());
+
+        for (Department department: departments) {
+
+            if (department.getId() == employee.getDepartment()) {
+
+                System.out.println("Department: " + department.getName());
+
+            }
+        }
+        System.out.println("Account: " + employee.getEmail());
+
+    }
 }

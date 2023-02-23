@@ -89,14 +89,15 @@ public static void consultSalaryCostFromDepartment() {
      */
 
     public static void incorporateDepartment() {
+        ArrayList<Department> departments = DepartmentsData.getDepartments();
         boolean save = true;
 
-        int id = DepartmentsData.getDepartments().get(DepartmentsData.getDepartments().size() - 1).getId() + 1;
+        int id = departments.get(departments.size() - 1).getId() + 1;
         String name = Utilities.readLine("Introduce el nombre del departamento ");
 
 
         Department department = new Department(id, name);
-        DepartmentsData.getDepartments().add(department);
+        departments.add(department);
         System.out.println("Se ha creado un nuevo departamento");
         save = false;
     }
@@ -193,6 +194,7 @@ public static void consultSalaryCostFromDepartment() {
             }
         }
     }
+
 }
 
 

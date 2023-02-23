@@ -5,7 +5,6 @@ import FileAccess.CSV.CSVWritters.ExtraHoursWritter;
 import FileAccess.CSV.CSVWritters.QuoteGroupWritter;
 import Settings.Settings;
 import Util.Utilities;
-
 import java.io.File;
 
 public class MainMenu {
@@ -20,19 +19,17 @@ public class MainMenu {
             Utilities.cleanScreen();
 
             System.out.println();
-            election = Utilities.readNumber(String.format(lineSup + "\n| %-30s | %-30s | %-30s | %-30s | %-30s |\n" + lineInf, "1.Consultar ", "2.Incorporar", "3.Modificar/Eliminar", "4. Exportar a CSV", "0.Salir"));
+            election = Utilities.readNumber(String.format(lineSup + "\n| %-30s | %-30s | %-30s | %-30s | %-30s |\n" + lineInf, "1.Consult ", "2.Add", "3.Modifie/Delete", "4. Export to CSV", "0.Exit"));
 
             switch (election) {
                 case 1:
-                    //MenuConsult;
+                    MenuConsult.Consult();
                     break;
                 case 2:
-                    //MenuAdd;
-
+                    MenuAdd.Add();
                     break;
                 case 3:
-                    //MenuModifie;
-
+                    MenuModifie.Modifie();
                     break;
                 case 4:
                     writeToCSV();

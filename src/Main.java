@@ -61,11 +61,6 @@ public class Main {
 		}
 		EmployeeQuery.employeesByDepartment(1);
 
-
-
-
-
-
 		for (File file: csvFolder.listFiles()) {
 			if (file.getName().equals(Settings.csvEmployees)) {
 				EmployeeWritter employeeWritter = new EmployeeWritter(file);
