@@ -17,7 +17,7 @@ public class DepartmentReader extends CSVReader {
 	}
 
 	@Override
-	public Object saveData() {
+	public Object saveReadedData() {
 		ArrayList<ArrayList<String>> departmentsDataString = super.readFile();
 
 		DepartmentsData departmentsData = new DepartmentsData();

@@ -25,7 +25,7 @@ public class EmployeeReader extends CSVReader {
 	 * @return
 	 */
 	@Override
-	public Object saveData() {
+	public Object saveReadedData() {
 		ArrayList<ArrayList<String>> employeesDataString = super.readFile();
 
 		EmployeesData employeesData = new EmployeesData();

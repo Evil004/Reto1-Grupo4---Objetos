@@ -17,7 +17,7 @@ public class ExtraHoursReader extends CSVReader {
 	}
 
 	@Override
-	public Object saveData() {
+	public Object saveReadedData() {
 		ArrayList<ArrayList<String>> extraHoursDataString = super.readFile();
 
 		ExtraHoursData extraHoursData = new ExtraHoursData();
