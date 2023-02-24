@@ -19,7 +19,7 @@ public class QuoteGroupQuery {
             }
 
             if (i.getId() == quoteGroup) {
-                System.out.println("El grupo de cotizacion " + i.getId() + " tiene un coste salarial de " + i.getSalaryBase() * employeesByGroup + "€");
+                System.out.println("The quote group " + i.getId() + " has a salary cost of " + i.getSalaryBase() * employeesByGroup + "€");
 
             }
         }

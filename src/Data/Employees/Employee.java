@@ -18,23 +18,23 @@ public class Employee {
         private String email;
         private int department;
 
-        public Employee(int id, String dni, String nombre, String apellido1, String apellido2, String cuenta, int nss, String antiguedad, String catGrupProfesional, int grupCotizacion, String email, int departamento) {
+        public Employee(int id, String dni, String name, String surname1, String surname2, String account, int nss, String seniority, String groupProfCat, int quoteGroup, String email, int department) {
             this.id = id;
             this.dni = dni;
-            this.name = nombre;
-            this.surname1 = apellido1;
-            this.surname2 = apellido2;
-            this.account = cuenta;
+            this.name = name;
+            this.surname1 = surname1;
+            this.surname2 = surname2;
+            this.account = account;
             this.nss = nss;
-            this.seniority = antiguedad;
-            this.groupProfCat = catGrupProfesional;
-            this.quoteGroup = grupCotizacion;
+            this.seniority = seniority;
+            this.groupProfCat = groupProfCat;
+            this.quoteGroup = quoteGroup;
             this.email = email;
-            this.department = departamento;
+            this.department = department;
         }
 
         public String toString(){
-            return "ID: " + id + " DNI: " + dni + " Nombre: " + name + " Apellido1: " + surname1 + " Apellido2: " + surname2 + " Cuenta: " + account + " NSS: " + nss + " Antiguedad: " + seniority + " CatGrupProfesional: " + groupProfCat + " GrupCotizacion: " + quoteGroup + " Email: " + email + " Departamento: " + department;
+            return "ID: " + id + " DNI: " + dni + " Name: " + name + " Surnames: " + surname1 + " " + surname2 + " Account: " + account + " NSS: " + nss + " Seniority: " + seniority + " Profesional Group: " + groupProfCat + " Quote Group: " + quoteGroup + " Email: " + email + " Department: " + department;
         }
 
     public int getId() {

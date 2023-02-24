@@ -26,7 +26,7 @@ public class EmployeeQuery {
                     return;
                 }
             }
-            System.out.println("No existe un empleado con ese DNI");
+            System.out.println("There is no employee with that DNI");
 
     }
     public static Employee employeeByID(int ID) {
@@ -38,7 +38,7 @@ public class EmployeeQuery {
                     return employee;
                 }
             }
-            System.out.println("No se ha encontrado un empleado con ese ID.");
+            System.out.println("There is no employee with that ID.");
 
         return null;
     }
@@ -53,7 +53,7 @@ public class EmployeeQuery {
                     for (Department department: departments) {
                         if (department.getId() == idDep) {
                             flag = true;
-                            System.out.printf("ID: %-12s Empleado: %-12s Departamento: %-12s \n", employee.getId(), employee.getName(), departments.get(departments.indexOf(department)).getName());
+                            System.out.printf("ID: %-12s Employee: %-12s Department: %-12s \n", employee.getId(), employee.getName(), departments.get(departments.indexOf(department)).getName());
                         }
                     }
 
@@ -62,7 +62,7 @@ public class EmployeeQuery {
             if (flag) {
                 return;
             }
-            System.out.println("No se ha encontrado un departamento con ese id");
+            System.out.println("There is no department with that ID");
         }
 
     }
@@ -70,23 +70,23 @@ public class EmployeeQuery {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
         Employee employee = createEmployee();
         EmployeesData.addEmployee(employee);
-        System.out.println("Se ha creado un nuevo empleado");
+        System.out.println("A new employee has been created");
     }
     private static Employee createEmployee() {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
 
         int id = employees.get(employees.size() - 1).getId() + 1;
-        String dni = Utilities.readLine("Introduce el DNI del empleado: ");
-        String nombre = Utilities.readLine("Introduce el nombre del empleado: ");
-        String apellido1 = Utilities.readLine("Introduce el primer apellido del empleado: ");
-        String apellido2 = Utilities.readLine("Introduce el segundo apellido del empleado: ");
-        String cuenta = Utilities.readLine("Introduce la cuenta del empleado: ");
-        int nss = Utilities.readNumber("Introduce el numero de la seguridad social del empleado: ");
-        String antiguedad = Utilities.readLine("Introduce la antiguedad del empleado: ");
-        String catGrupProfesional = Utilities.readLine("Introduce la categoria del grupo profesional del empleado: ");
-        int grupCotizacion = Utilities.readNumber("Introduce el grupo de cotizacion del empleado: ");
-        int departamento = Utilities.readNumber("Introduce el departamento del empleado: ");
-        String email = Utilities.readLine("Introduce el email del empleado: ");
+        String dni = Utilities.readLine("Enter the employee's DNI: ");
+        String nombre = Utilities.readLine("Enter the employee's name: ");
+        String apellido1 = Utilities.readLine("Enter the employee's first surname: ");
+        String apellido2 = Utilities.readLine("Enter the employee's second surname: ");
+        String cuenta = Utilities.readLine("Enter the employee's account: ");
+        int nss = Utilities.readNumber("Enter the employee's social security name: ");
+        String antiguedad = Utilities.readLine("Enter the employee's seniority: ");
+        String catGrupProfesional = Utilities.readLine("Enter the employee's profesional group: ");
+        int grupCotizacion = Utilities.readNumber("Enter the employee's quote group: ");
+        int departamento = Utilities.readNumber("Enter the employee's department: ");
+        String email = Utilities.readLine("Enter the employee's email: ");
 
 
         return new Employee(id, dni, nombre, apellido1, apellido2, cuenta, nss, antiguedad, catGrupProfesional, grupCotizacion, email, departamento);
@@ -118,19 +118,19 @@ public class EmployeeQuery {
         Employee employee = EmployeesData.getEmployeeByID(id);
 
         if (employee != null) {
-            System.out.println("Va a eliminar el empleado " + employee.getName());
-            String decision = Utilities.readLine("Quieres continuar? (si/no)");
+            System.out.println("You are going to delete the employee " + employee.getName());
+            String decision = Utilities.readLine("Do you want to continue? (yes/no)");
 
-            if (decision.equals("si")) {
+            if (decision.equals("yes")) {
                 EmployeesData.removeEmployee(employee);
-                System.out.println("Se ha eliminado el empleado");
+                System.out.println("Employee has been deleted");
             } else if (decision.equals("no")) {
-                System.out.println("Eliminación cancelada");
+                System.out.println("Deletion canceled");
             } else {
-                System.out.println("Introduce una respuesta válida");
+                System.out.println("Enter a valid answer");
             }
         } else {
-            System.out.println("No se ha encontrado ningún empleado con el id " + id);
+            System.out.println("No employee found with id " + id);
         }
     }
 

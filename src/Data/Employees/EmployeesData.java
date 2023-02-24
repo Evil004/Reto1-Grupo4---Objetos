@@ -7,6 +7,7 @@ import java.util.Objects;
  * @author Jose Vicente Ebri
  * Contains the data about employees
  */
+
 public class EmployeesData {
     private static ArrayList<Employee> employees;
     private static String columns;
