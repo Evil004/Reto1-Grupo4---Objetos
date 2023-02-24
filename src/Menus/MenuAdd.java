@@ -14,7 +14,7 @@ public class MenuAdd {
 
         do {
             Utilities.cleanScreen();
-            election = Utilities.readNumber(String.format(lineSup + "\n| %-30s | %-30s | %-30s | %-30s | %-30s |\n" + lineInf, "1.New Employee", "2.New Department", "3.Go back to Main Menu", "0.Exit"));
+            election = Utilities.readNumber(String.format(lineSup + "\n| %-30s | %-30s | %-30s | %-30s | %-30s |\n" + lineInf, "1.New Employee", "2.New Department", "3.Go back to Main Menu", "0.Exit",""));
 
             switch (election) {
                 case 1:

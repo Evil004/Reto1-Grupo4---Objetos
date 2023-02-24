@@ -14,7 +14,7 @@ public class SubmenuExtraHours {
         do {
             Utilities.cleanScreen();
 
-            election = Utilities.readNumber(String.format(lineSup + "\n| %-30s | %-30s | %-30s | %-30s | %-30s |\n" + lineInf, "1.Extra hours by ID", "2.Extra hours by DNI", "3.Go to last menu", "0.Exit"));
+            election = Utilities.readNumber(String.format(lineSup + "\n| %-30s | %-30s | %-30s | %-30s | %-30s |\n" + lineInf, "1.Extra hours by ID", "2.Extra hours by DNI", "3.Go to last menu", "0.Exit",""));
 
             switch (election) {
                 case 1:
