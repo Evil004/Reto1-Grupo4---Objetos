@@ -27,9 +27,9 @@ public class QuoteGroupReader extends CSVReader{
 		for (ArrayList<String> quoteGroupData : quoteGroupsDataString ) {
 
 			int id = Integer.parseInt(quoteGroupData.get(0));
-			float sueldoBase = Float.parseFloat(quoteGroupData.get(1).replace(",", "."));
+			float baseSalary = Float.parseFloat(quoteGroupData.get(1).replace(",", "."));
 
-			QuoteGroup quoteGroup = new QuoteGroup(id, sueldoBase);
+			QuoteGroup quoteGroup = new QuoteGroup(id, baseSalary);
 
 			quoteGroupsData.addQuoteGroup(quoteGroup);
 		}
