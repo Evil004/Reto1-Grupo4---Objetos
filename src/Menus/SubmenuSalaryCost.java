@@ -13,11 +13,12 @@ public class SubmenuSalaryCost {
 
         do {
             Utilities.cleanScreen();
-            election = Utilities.readNumber(String.format(lineSup + "\n| %-30s | %-30s | %-30s | %-30s | %-30s | %-30s |\n" + lineInf, "1.Cost by Quote Grup", "2.Salary cost from department", "3.Go to last menu", "0.Exit", "", ""));
+            election = Utilities.readNumber(String.format(lineSup + "\n| %-30s | %-30s | %-30s | %-30s | %-30s | %-30s |\n" + lineInf, "1.Cost by Quote Grup", "2.Salary cost from department", "3.Go to last menu", "0.Exit"));
 
             switch (election) {
                 case 1:
-                    //QuoteGroupQuery.SalaryCostQuoteGroup(int category);
+                    int category = Utilities.readNumber("Enter de number of the Quote Group: ");
+                    QuoteGroupQuery.SalaryCostQuoteGroup(category);
                     Utilities.waitEnter();
                     break;
                 case 2:

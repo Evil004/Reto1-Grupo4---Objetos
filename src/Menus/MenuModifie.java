@@ -17,7 +17,8 @@ public class MenuModifie {
 
             switch (election) {
                 case 1:
-                    //EmployeeQuery.modifyPersonalData(int id);
+                    int id = Utilities.readNumber("Enter de ID: ");
+                    EmployeeQuery.modifyPersonalData(id);
                     Utilities.waitEnter();
                     break;
                 case 2:
@@ -25,7 +26,8 @@ public class MenuModifie {
                     Utilities.waitEnter();
                     break;
                 case 3:
-                    //EmployeeQuery.deleteEmployeeData(int id);
+                    id = Utilities.readNumber("Enter de employees ID: ");
+                    EmployeeQuery.deleteEmployeeData(id);
                     Utilities.waitEnter();
                     break;
                 case 4:
