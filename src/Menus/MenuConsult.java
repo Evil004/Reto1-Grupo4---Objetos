@@ -1,6 +1,11 @@
 package Menus;
 import Util.Utilities;
 
+/**
+ * autor/es: Jonathan Taban
+ * MENU CONSULT
+ */
+
 public class MenuConsult {
     public static int election;
     public static String lineInf = Utilities.generateLines("¯");

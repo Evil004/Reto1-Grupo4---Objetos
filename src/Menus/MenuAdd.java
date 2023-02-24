@@ -4,6 +4,11 @@ import Data.Departments.DepartmentQuery;
 import Data.Employees.EmployeeQuery;
 import Util.Utilities;
 
+
+/**
+ * autor/es: Jonathan Taban
+ * MENU ADD
+ */
 public class MenuAdd {
     public static int election;
     public static String lineInf = Utilities.generateLines("¯");

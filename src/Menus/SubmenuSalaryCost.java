@@ -1,9 +1,13 @@
 package Menus;
-
 import Data.Departments.DepartmentQuery;
 import Data.QuoteGroup.QuoteGroupQuery;
 import Util.Utilities;
 
+
+/**
+ * autor/es: Jonathan Taban
+ * SUBMENU SALARY COST
+ */
 public class SubmenuSalaryCost {
     public static int election;
     public static String lineInf = Utilities.generateLines("¯");
