@@ -28,6 +28,7 @@ public class ExtraHourQuery{
                 return;
             }
 
+
             int hours = hour.getEndTime() - hour.getStartTime();
             System.out.println(employee.getName() + " worked " + hours + " extra hours");
             return;
