@@ -15,7 +15,6 @@ public class ExtraHourQuery{
     public static void extraHourNIFQuery(String dni) {
         while (true) {
             for (ExtraHours hour: ExtraHoursData.getExtraHours()) {
-
                 if (hour.getNif().equals(dni)) {
                     for (Employee employee: EmployeesData.getEmployees()) {
                         if (employee.getDni().equals(dni)) {

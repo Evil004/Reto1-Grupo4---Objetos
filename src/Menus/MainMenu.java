@@ -7,6 +7,11 @@ import Settings.Settings;
 import Util.Utilities;
 import java.io.File;
 
+
+/**
+ * autor/es: Jonathan Taban
+ * MAIN MENU
+ */
 public class MainMenu {
     public static int election;
     public static String lineInf = Utilities.generateLines("¯");

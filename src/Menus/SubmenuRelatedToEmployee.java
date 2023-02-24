@@ -4,9 +4,12 @@ import Data.Employees.Employee;
 import Data.Employees.EmployeeQuery;
 import Data.Employees.EmployeesData;
 import Util.Utilities;
-
 import java.util.ArrayList;
 
+/**
+ * autor/es: Jonathan Taban
+ * SUBMENU RELATED TO EMPLOYEE
+ */
 public class SubmenuRelatedToEmployee {
     public static int election;
     public static String lineInf = Utilities.generateLines("¯");

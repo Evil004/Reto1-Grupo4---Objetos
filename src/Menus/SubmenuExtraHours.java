@@ -3,7 +3,10 @@ import Data.ExtraHours.ExtraHourQuery;
 import Data.ExtraHours.ExtraHours;
 import Util.Utilities;
 
-
+/**
+ * autor/es: Jonathan Taban
+ * SUBMENU EXTRA HOURS
+ */
 public class SubmenuExtraHours {
     public static int election;
     public static String lineInf = Utilities.generateLines("¯");
