@@ -137,7 +137,7 @@ public static void consultSalaryCostFromDepartment() {
     public static void Decision(int id){
         ArrayList<Department> departments = DepartmentsData.getDepartments();
         ArrayList<Employee> employees = EmployeesData.getEmployees();
-        Department department = null;
+        Department department = departments.get(id);
         boolean save = true;
 
         int numberOfEmployees = countEmployeeOnDep(id);
