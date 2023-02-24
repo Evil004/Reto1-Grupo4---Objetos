@@ -27,9 +27,9 @@ public class DepartmentReader extends CSVReader {
 		for (ArrayList<String> departmentData : departmentsDataString ) {
 
 			int id = Integer.parseInt(departmentData.get(0));
-			String nombre = departmentData.get(1);
+			String name = departmentData.get(1);
 
-			Department department = new Department(id, nombre);
+			Department department = new Department(id, name);
 
 			departmentsData.addDepartment(department);
 		}

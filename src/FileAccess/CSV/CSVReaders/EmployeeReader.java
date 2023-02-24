@@ -35,11 +35,11 @@ public class EmployeeReader extends CSVReader {
 		for (ArrayList<String> employeeData: employeesDataString) {
 
 			String dni = employeeData.get(0);
-			String nombre = employeeData.get(1);
-			String apellido1 = employeeData.get(2);
-			String apellido2 = employeeData.get(3);
-			String cuenta = employeeData.get(4);
-			String antiguedad = employeeData.get(5);
+			String name = employeeData.get(1);
+			String surname1 = employeeData.get(2);
+			String surname2 = employeeData.get(3);
+			String acount = employeeData.get(4);
+			String seniority = employeeData.get(5);
 
 			int nss;
 			if (employeeData.get(6) == ""){
@@ -47,10 +47,10 @@ public class EmployeeReader extends CSVReader {
 			} else {
 				nss = Integer.parseInt(employeeData.get(6));
 			}
-			String catGrupProfesional = employeeData.get(7);
-			int grupCotizacion = Integer.parseInt(employeeData.get(8));
+			String groupProfCat = employeeData.get(7);
+			int quoteGroup = Integer.parseInt(employeeData.get(8));
 			String email = employeeData.get(9);
-			int departamento = Integer.parseInt(employeeData.get(10));
+			int department = Integer.parseInt(employeeData.get(10));
 			int id;
 			if (employeeData.get(11) == ""){
 				id = EmployeesData.getLastId() + 1;
@@ -59,7 +59,7 @@ public class EmployeeReader extends CSVReader {
 			}
 
 
-			Employee employee = new Employee(id, dni, nombre, apellido1, apellido2, cuenta, nss, antiguedad, catGrupProfesional, grupCotizacion, email, departamento);
+			Employee employee = new Employee(id, dni, name, surname1, surname2, acount, nss, seniority, groupProfCat, quoteGroup, email, department);
 
 			employeesData.addEmployee(employee);
 		}
