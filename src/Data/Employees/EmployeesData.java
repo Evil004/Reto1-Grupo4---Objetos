@@ -1,6 +1,7 @@
 package Data.Employees;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * @author Jose Vicente Ebri
@@ -43,6 +44,16 @@ public class EmployeesData {
 
         }
         return 0;
+    }
+
+    public static Employee getEmployeeByDNI(String dni){
+        for (Employee employee : employees) {
+            if (Objects.equals(employee.getDni(), dni)) {
+                return employee;
+            }
+
+        }
+        return null;
     }
 
     public static String getColumns() {

@@ -5,6 +5,8 @@ import static Util.Utilities.*;
 import Data.Employees.Employee;
 import Data.Employees.EmployeesData;
 
+import java.util.Objects;
+
 /**
  * @author Pere Prior
  */
@@ -13,24 +15,26 @@ public class ExtraHourQuery{
 
     //QUERY
     public static void extraHourNIFQuery(String dni) {
-        while (true) {
-            for (ExtraHours hour: ExtraHoursData.getExtraHours()) {
 
-                if (hour.getNif().equals(dni)) {
-                    for (Employee employee: EmployeesData.getEmployees()) {
-                        if (employee.getDni().equals(dni)) {
-                            int hours = (hour.getEndTime() - hour.getStartTime());
-                            System.out.println(employee.getName() + " worked " + hours + " extra hours");
-                            return;
-                        }
-                    }
-
-                }
+        for (ExtraHours hour : ExtraHoursData.getExtraHours()) {
+            if (!Objects.equals(hour.getNif(), dni)){
+                continue;
             }
-            System.out.println("This employee doesn't have extra hours.");
+
+            Employee employee = EmployeesData.getEmployeeByDNI(dni);
+
+            if (employee == null){
+                System.out.println("Employee with that DNI not found");
+                return;
+            }
+
+            int hours = hour.getEndTime() - hour.getStartTime();
+            System.out.println(employee.getName() + " worked " + hours + " extra hours");
+            return;
+
 
         }
-
+        System.out.println("Employee with that DNI not found");
     }
 
     public static void extraHourIDQuery() {
