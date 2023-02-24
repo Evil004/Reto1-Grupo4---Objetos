@@ -1,5 +1,5 @@
 package FileAccess;
 
 public interface IReadable {
-	public Object saveData();
+	public Object saveReadedData();
 }

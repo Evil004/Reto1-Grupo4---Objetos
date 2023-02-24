@@ -17,7 +17,7 @@ public class QuoteGroupReader extends CSVReader{
 	}
 
 	@Override
-	public Object saveData() {
+	public Object saveReadedData() {
 		ArrayList<ArrayList<String>> quoteGroupsDataString = super.readFile();
 
 		QuoteGroupsData quoteGroupsData = new QuoteGroupsData();
