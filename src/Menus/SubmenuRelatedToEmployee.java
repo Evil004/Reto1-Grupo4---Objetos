@@ -29,12 +29,14 @@ public class SubmenuRelatedToEmployee {
                     Utilities.waitEnter();
                     break;
                 case 2:
-                    //EmployeeQuery.employeeByDNI(String dni);
+                    String dni = Utilities.readLine("Enter de DNI: ");
+                    EmployeeQuery.employeeByDNI(dni);
                     Utilities.waitEnter();
 
                     break;
                 case 3:
-                    //EmployeeQuery.employeesByDepartment(int idDep);
+                    int idDep = Utilities.readNumber("Enter the ID from the Department: ");
+                    EmployeeQuery.employeesByDepartment(idDep);
                     Utilities.waitEnter();
 
                     break;
@@ -43,11 +45,13 @@ public class SubmenuRelatedToEmployee {
                     Utilities.waitEnter();
                     break;
                 case 5:
-                    //EmployeeQuery.employeeByCategory(String Category);
+                    String Category = Utilities.readLine("Enter de Category: ");
+                    EmployeeQuery.employeeByCategory(Category);
                     Utilities.waitEnter();
                     break;
                 case 6:
-                    //EmployeeQuery.employeeByID(int ID);
+                    int ID = Utilities.readNumber("Enter the employees ID: ");
+                    EmployeeQuery.employeeByID(ID);
                     Utilities.waitEnter();
                     break;
                 case 7:
