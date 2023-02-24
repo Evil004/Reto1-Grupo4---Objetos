@@ -62,7 +62,7 @@ public class SubmenuRelatedToEmployee {
                     flag = false;
                     break;
                 default:
-                    System.out.println("Opcion Invalida");
+                    System.out.println("Invalid Option");
             }
             Utilities.cleanScreen();
 

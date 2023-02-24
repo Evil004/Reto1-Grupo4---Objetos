@@ -33,7 +33,7 @@ public class MenuAdd {
                     break;
 
                 default:
-                    System.out.println("Opcion inválida");
+                    System.out.println("Invalid Option");
                     Utilities.waitEnter();
                     continue;
             }

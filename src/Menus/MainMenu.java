@@ -40,13 +40,13 @@ public class MainMenu {
                     break;
 
                 default:
-                    System.out.println("Opcion inválida");
+                    System.out.println("Invalid Option");
                     continue;
             }
             Utilities.cleanScreen();
 
         } while (flag);
-        System.out.println("Cerrando el programa...");
+        System.out.println("Closing the program...");
     }
 
     private static void writeToCSV(){

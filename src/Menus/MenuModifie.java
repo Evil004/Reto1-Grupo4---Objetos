@@ -26,7 +26,7 @@ public class MenuModifie {
                     Utilities.waitEnter();
                     break;
                 case 3:
-                    id = Utilities.readNumber("Enter de employees ID: ");
+                    id = Utilities.readNumber("Enter the employees ID: ");
                     EmployeeQuery.deleteEmployeeData(id);
                     Utilities.waitEnter();
                     break;
@@ -36,7 +36,7 @@ public class MenuModifie {
                     flag = false;
                     break;
                 default:
-                    System.out.println("Opcion inválida");
+                    System.out.println("Invalid Option");
                     Utilities.waitEnter();
                     continue;
             }

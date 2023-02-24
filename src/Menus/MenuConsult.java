@@ -31,7 +31,7 @@ public class MenuConsult {
                     flag = false;
                     break;
                 default:
-                    System.out.println("Opcion invalida");
+                    System.out.println("Invalid Option");
 
             }
             Utilities.cleanScreen();

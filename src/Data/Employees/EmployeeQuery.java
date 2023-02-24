@@ -7,12 +7,11 @@ import java.util.ArrayList;
 
 public class EmployeeQuery {
 
-    public static void employeeByCategory(String Category){
+    public static void employeeByCategory(String category){
         ArrayList<Employee> employees = EmployeesData.getEmployees();
         System.out.println("A1 - A2 - A3 - B1 - B2 -B3");
-        String categoria = Util.Utilities.readLine("Introduce la categoria de la que obtener los employees: ");
         for (Employee employee: employees) {
-            if (employee.getGroupProfCat().equals(categoria)) {
+            if (employee.getGroupProfCat().equals(category)) {
                 System.out.println(employee);;
             }
         }
