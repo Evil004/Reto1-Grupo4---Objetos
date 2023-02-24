@@ -1,6 +1,10 @@
 package Data.Departments;
 
+import Data.Employees.Employee;
+
 import java.util.ArrayList;
+import java.util.Objects;
+
 /**
  * autor/es: JonathanTaban
  * This class stores the data of the Departments.
@@ -35,5 +39,15 @@ public class DepartmentsData {
 
     public static void setColumns(String columns) {
     	DepartmentsData.columns = columns;
+    }
+
+    public static Department getByID(int id){
+            for (Department department : departments) {
+                if (department.getId() == id) {
+                    return department;
+                }
+
+            }
+            return null;
     }
 }
