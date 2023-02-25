@@ -9,7 +9,6 @@ public class EmployeeQuery {
 
     public static void employeeByCategory(String category){
         ArrayList<Employee> employees = EmployeesData.getEmployees();
-        System.out.println("A1 - A2 - A3 - B1 - B2 -B3");
         for (Employee employee: employees) {
             if (employee.getGroupProfCat().equals(category)) {
                 System.out.println(employee);;
@@ -46,7 +45,7 @@ public class EmployeeQuery {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
         ArrayList<Department> departments = DepartmentsData.getDepartments();
 
-        while (true) {
+
             boolean flag = false;
             for (Employee employee: employees) {
                 if (employee.getDepartment() == idDep) {
@@ -65,7 +64,7 @@ public class EmployeeQuery {
             System.out.println("There is no department with that ID");
         }
 
-    }
+
     public static void incorporeEmployee() {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
         Employee employee = createEmployee();
