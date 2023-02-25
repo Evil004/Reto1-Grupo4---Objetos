@@ -27,7 +27,7 @@ public class SubmenuRelatedToEmployee {
             switch (election) {
                 case 1:
                     for (Employee employee: employees) {
-                       EmployeeQuery.printEmployeesData(employee);
+                        System.out.println(employee);
                     }
                     Utilities.waitEnter();
                     break;
