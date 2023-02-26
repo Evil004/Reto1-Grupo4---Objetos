@@ -27,6 +27,10 @@ public class Main {
 		ExtraHoursData extraHours = null;
 		QuoteGroupsData quoteGroups = null;
 
+		if (csvFolder.listFiles() == null) {
+			System.out.println("The folder does not contain any files.");
+			return;
+		}
 		for (File file: csvFolder.listFiles()) {
 
 			if (file.getName().equals(Settings.csvEmployees)) {
