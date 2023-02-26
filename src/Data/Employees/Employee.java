@@ -2,8 +2,11 @@ package Data.Employees;
 
 import Data.QuoteGroup.QuoteGroup;
 
+/**
+ * @author Jose Vicente
+ * Employee's Constructor Class
+ */
 public class Employee {
-
 
         private int id;
         private String dni;

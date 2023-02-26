@@ -67,4 +67,7 @@ public class EmployeesData {
     public static void removeEmployee(Employee employee) {
         employees.remove(employee);
     }
+    public static void setEmployees(ArrayList<Employee> newEmployees) {
+        employees = newEmployees;
+    }
 }

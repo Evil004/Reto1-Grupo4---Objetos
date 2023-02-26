@@ -4,17 +4,30 @@ import Data.Departments.DepartmentsData;
 import Util.Utilities;
 import java.util.ArrayList;
 
-
+/**
+ * @author Jose Vicente
+ * Class to do actions about employees as consult, removes or add
+ */
 public class EmployeeQuery {
-
+    /**
+     * Method to get a list of employees by his quotegroup
+     * @param category
+     * @return Employee
+     */
     public static void employeeByCategory(String category){
         ArrayList<Employee> employees = EmployeesData.getEmployees();
         for (Employee employee: employees) {
             if (employee.getGroupProfCat().equals(category)) {
                 System.out.println(employee);;
+
             }
         }
     }
+
+    /**
+     * Methot to get data about employee by his DNI
+     * @param dni
+     */
     public static void employeeByDNI(String dni) {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
 
@@ -28,6 +41,12 @@ public class EmployeeQuery {
             System.out.println("There is no employee with that DNI");
 
     }
+
+    /**
+     * Method to obtain employee data by his ID
+     * @param ID
+     * @return Employee
+     */
     public static Employee employeeByID(int ID) {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
 
@@ -41,6 +60,11 @@ public class EmployeeQuery {
 
         return null;
     }
+
+    /**
+     * Method to  obtain a list of employees by his department
+     * @param idDep
+     */
    public static void employeesByDepartment(int idDep) {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
         ArrayList<Department> departments = DepartmentsData.getDepartments();
@@ -64,13 +88,20 @@ public class EmployeeQuery {
             System.out.println("There is no department with that ID");
         }
 
-
+    /**
+     * Method to add employee to arraylist
+     */
     public static void incorporeEmployee() {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
         Employee employee = createEmployee();
         EmployeesData.addEmployee(employee);
         System.out.println("A new employee has been created");
     }
+
+    /**
+     * Method to create a new employee
+     * @return Employee
+     */
     private static Employee createEmployee() {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
 
@@ -91,6 +122,11 @@ public class EmployeeQuery {
         return new Employee(id, dni, nombre, apellido1, apellido2, cuenta, nss, antiguedad, catGrupProfesional, grupCotizacion, email, departamento);
     }
 
+    /**
+     * Method to modify an existent exployee personal data.
+     * @param id
+     * {@link #createEmployee()}
+     */
     public static void modifyPersonalData(int id) {
         ArrayList<Employee> employees = EmployeesData.getEmployees();
 
@@ -113,6 +149,11 @@ public class EmployeeQuery {
 
 
     }
+
+    /**
+     * Method to delete an employee by his ID.
+     * @param id
+     */
     public static void deleteEmployeeData(int id) {
         Employee employee = EmployeesData.getEmployeeByID(id);
 

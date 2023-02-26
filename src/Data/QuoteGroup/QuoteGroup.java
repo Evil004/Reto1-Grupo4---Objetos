@@ -4,6 +4,10 @@ import Data.Employees.Employee;
 
 import static Data.Employees.EmployeesData.getEmployees;
 
+/**
+ * @author Jose Vicente
+ * QuoteGroup's Constructor Class
+ */
 public class QuoteGroup {
     private int id;
     private float salaryBase;

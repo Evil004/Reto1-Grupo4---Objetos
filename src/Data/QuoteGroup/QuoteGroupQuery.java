@@ -5,7 +5,15 @@ import Data.QuoteGroup.*;
 
 import java.util.ArrayList;
 
+/**
+ * @author Jose Vicente
+ * Class to query some information about QuoteGroup
+ */
 public class QuoteGroupQuery {
+    /**
+     * Method to show how money cost by quotegroup
+     * @param quoteGroup
+     */
     public static void SalaryCostQuoteGroup(int quoteGroup) {
         ArrayList<QuoteGroup> quoteGroups = QuoteGroupsData.getQuoteGroups();
         ArrayList<Employee> employees = EmployeesData.getEmployees();
