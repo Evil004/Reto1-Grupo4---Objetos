@@ -1,5 +1,7 @@
-package Data.Employees;
+package test.Data.Employees;
 
+import Data.Employees.Employee;
+import Data.Employees.EmployeesData;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

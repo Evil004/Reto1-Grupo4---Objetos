@@ -1,5 +1,9 @@
-package Data.Employees;
+package test.Data.Employees;
 
+import Data.Employees.Employee;
+import Data.Employees.EmployeeQuery;
+import Data.Employees.EmployeesData;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -27,7 +31,7 @@ class EmployeeQueryTest {
 
     @Test
     void employeeByID() {
-        assertEquals("Juan", EmployeeQuery.employeeByID(1).getName());
+        Assertions.assertEquals("Juan", EmployeeQuery.employeeByID(1).getName());
         assertEquals("María", EmployeeQuery.employeeByID(2).getName());
         assertNull(EmployeeQuery.employeeByID(4)); // ID no existente
     }

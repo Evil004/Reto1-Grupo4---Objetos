@@ -16,6 +16,11 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		ReadFiles();
+		MainMenu.menu();
+	}
+
+	private static void ReadFiles() {
 		File csvFolder = new File(Settings.csvFolder);
 		EmployeesData employees = null;
 		DepartmentsData departments = null;
@@ -47,6 +52,5 @@ public class Main {
 			}
 
 		}
-		MainMenu.menu();
 	}
 }
