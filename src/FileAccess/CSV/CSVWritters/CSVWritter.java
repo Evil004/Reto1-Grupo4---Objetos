@@ -14,6 +14,10 @@ import java.util.ArrayList;
 
 public abstract class CSVWritter implements IWritteable {
 
+    /**
+     * @author Óscar Fernandez
+     * @param data
+     */
     void writeFile(ArrayList<ArrayList<String>> data){
 
         try {

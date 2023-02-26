@@ -6,6 +6,9 @@ import Data.ExtraHours.ExtraHoursData;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * @author Oscar Fernandez
+ */
 public class ExtraHoursWritter extends CSVWritter{
 
     public ExtraHoursWritter(File file) {

@@ -30,6 +30,9 @@ public class Department {
         this.name = name;
     }
 
+    /**
+     * @author Óscar Fernandez
+     */
     public String toString(){
         return "ID: " + id + " Name: " + name;
     }

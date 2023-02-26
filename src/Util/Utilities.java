@@ -94,6 +94,9 @@ public class Utilities {
         return finalArrayList;
     }
 
+    /**
+     * author: Óscar Fernández.
+     */
     public static int getIndexInArray(String[] array, String value){
         for (int i = 0; i < array.length; i++) {
             if (array[i].equals(value)){
@@ -103,6 +106,9 @@ public class Utilities {
         return -1;
     }
 
+    /**
+     * author: Óscar Fernández.
+     */
 	public static String arrayListToString(ArrayList<String> line, String separator) {
         String str = "";
         for (String field : line) {
