@@ -10,24 +10,12 @@ import java.util.Scanner;
 
 public class Utilities {
 
-    public static boolean checkConsole() {
-        while (true) {
-            System.out.println("Para que este programa se vea correctamente, necesitas una consola con 166 columnas o mas.\n"
-                    + "Si ves la linea de abajo con cortes o saltos de linea, es que tu consola no tiene 166 columnas o mas. Por favor redimensiona la consola.\n"
-                    + supLine);
-            String eleccion = readLine("Ves bien la linea de arriba? (si/no)");
-            switch (eleccion) {
-                case "si":
-                    return true;
-                case "no":
-                    System.out.println("Por favor redimensiona la consola.");
-                    return false;
-                default:
-                    System.out.println("Por favor, introduce una opcion valida.");
-            }
-        }
-    }
-
+    /**
+     * autor: Pere Prior
+     * Request a number on the screen and save it in a variable
+     * @param message in screen
+     * @return number have read
+     */
     public static int readNumber(String message) throws InputMismatchException {
         int number;
         while (true) {
@@ -45,6 +33,11 @@ public class Utilities {
 
     }
 
+    /**
+     * Generates the lines that make up the menu
+     * @param character what forms the line
+     * @return the line
+     */
     public static String generateLines(String character) {
         String line = "";
         for (int i = 0; i < 166; i++) {
@@ -53,37 +46,42 @@ public class Utilities {
         return line;
     }
 
+    /**
+     * autor: Pere Prior
+     * Request a text on the screen and save it in a variable
+     * @param message in screen
+     * @return text have read
+     */
     public static String readLine(String message) throws InputMismatchException {
         inputValue = new Scanner(System.in);
         System.out.println(message);
         return inputValue.nextLine();
     }
 
+    /**
+     * autor: Pere Prior
+     * remove the old code from the terminal
+     */
     public static void cleanScreen() {
         for (int x = 0; x < 50; x++) {
             System.out.println(" ");
         }
     }
 
-    public static int getIndex(ArrayList<ArrayList<String>> dataCSV, String column) {
-        return dataCSV.get(0).indexOf(column);
-    }
-
+    /**
+     * autor: Pere Prior
+     * It serves as a transition, so that the user continues with the program when he presses enter
+     */
     public static void waitEnter() {
         readLine("\nPress ENTER to continue...");
     }
-
-    public static Scanner inputValue;
-    public static int choice;
-    public static String lowLine = generateLines("¯");
-    public static String supLine = generateLines("_");
 
 
     /**
      * author: Óscar Fernández.
      * A function to convert a String array to an ArrayList of Strings.
      * @param array An string array
-     * @return
+     * @return finalArrayList
      */
     public static ArrayList<String> arrayToArrayList(String[] array){
         ArrayList<String> finalArrayList = new ArrayList<>();
@@ -117,4 +115,6 @@ public class Utilities {
         str = str.substring(0, str.length() - 1);
         return str;
 	}
+
+    public static Scanner inputValue;
 }
