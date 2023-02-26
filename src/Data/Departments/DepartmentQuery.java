@@ -30,7 +30,7 @@ public class DepartmentQuery {
      * Consult the salary cost from department
      */
 public static void consultSalaryCostFromDepartment() {
-        int idDepartamento = Utilities.readNumber("Introduce el ID del departamento");
+        int idDepartamento = Utilities.readNumber("Enter the department ID");
 
         for (Department department: DepartmentsData.getDepartments()) {
             int costeDepartamento = 0;
@@ -45,7 +45,7 @@ public static void consultSalaryCostFromDepartment() {
                         }
                     }
                 }
-                System.out.println("El departamento " + department.name + " tiene un coste salarial de: " + costeDepartamento + "€");
+                System.out.println("The department " + department.name + " have a salary cost of: " + costeDepartamento + "€");
 
             }
         }
@@ -75,11 +75,11 @@ public static void consultSalaryCostFromDepartment() {
 
         if (DepartmentsData.getDepartments().size() > 0) {
             for (Department department: DepartmentsData.getDepartments()) {
-                System.out.println("Hay " + countEmployeeOnDep(department.getId()) + " empleados en el departamento " + department.name);
+                System.out.println("There are " + countEmployeeOnDep(department.getId()) + " employees in department " + department.name);
             }
 
         } else {
-            System.out.println("No se han encontrado departamentos");
+            System.out.println("This department doesn't exists");
         }
     }
 
@@ -93,12 +93,12 @@ public static void consultSalaryCostFromDepartment() {
         boolean save = true;
 
         int id = departments.get(departments.size() - 1).getId() + 1;
-        String name = Utilities.readLine("Introduce el nombre del departamento ");
+        String name = Utilities.readLine("Enter the department name ");
 
 
         Department department = new Department(id, name);
         departments.add(department);
-        System.out.println("Se ha creado un nuevo departamento");
+        System.out.println("The department has create correctly");
         save = false;
     }
 
@@ -110,7 +110,7 @@ public static void consultSalaryCostFromDepartment() {
     public static void deleteDepartmentData() {
         ArrayList<Department> departments = DepartmentsData.getDepartments();
 
-        int id = Utilities.readNumber("Introduce el ID del Departamento a eliminar: ");
+        int id = Utilities.readNumber("Enter the department ID to delete: ");
 
         Department department = null;
 
@@ -121,7 +121,7 @@ public static void consultSalaryCostFromDepartment() {
             }
         }
         if (department == null) {
-            System.out.println("No se ha encontrado el departamento con el id " + id);
+            System.out.println("It doesn't exists a department with ID " + id);
             return;
         }
 
@@ -143,9 +143,9 @@ public static void consultSalaryCostFromDepartment() {
         int numberOfEmployees = countEmployeeOnDep(id);
 
         while (true) {
-            String decision = Utilities.readLine("Se va a eleminar el departamento " + department.name + ", estas seguro? (si, no)");
+            String decision = Utilities.readLine("The department " + department.name + " is going to delete, are you sure? (yes, no)");
             switch (decision) {
-                case "si":
+                case "yes":
                     if (numberOfEmployees <= 0) {
                         departments.remove(department);
                         save = false;
@@ -153,13 +153,13 @@ public static void consultSalaryCostFromDepartment() {
                         return;
                     }
 
-                    System.out.println("Vas a eliminar el departamento " + department.name + " que tiene " + numberOfEmployees + " empleados");
+                    System.out.println("Are going to delete the department " + department.name + " with " + numberOfEmployees + " employees");
 
                     while (true) {
-                        decision = Utilities.readLine("Quieres continuar? (si/no) Si continuas se eliminaran todos los empleados en cascada");
+                        decision = Utilities.readLine("Do you want to continue? (yes/no)");
 
                         switch (decision) {
-                            case "si":
+                            case "yes":
 
                                 while (countEmployeeOnDep(id) > 0) {
                                     for (int j = 0; j < employees.size(); j++) {

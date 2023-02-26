@@ -13,7 +13,10 @@ import java.util.Objects;
 
 public class ExtraHourQuery{
 
-    //QUERY
+    /**
+     * Check the extra hours of an employee
+     * @param dni to search the employee to check
+     */
     public static void extraHourNIFQuery(String dni) {
 
         for (ExtraHours hour : ExtraHoursData.getExtraHours()) {
@@ -38,6 +41,9 @@ public class ExtraHourQuery{
         System.out.println("Employee with that DNI not found");
     }
 
+    /**
+     * Check the extra hours of an employee with his ID
+     */
     public static void extraHourIDQuery() {
         String EmployeeNIF = null;
         Employee employee = null;

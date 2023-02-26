@@ -24,6 +24,9 @@ public class DepartmentWritter extends CSVWritter{
         return DepartmentsData.getColumns();
     }
 
+    /**
+     * Takes the data from the departments and writes them to the CSV file
+     */
     @Override
     public void writeData() {
 
