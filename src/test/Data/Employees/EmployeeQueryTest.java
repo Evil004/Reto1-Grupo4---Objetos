@@ -14,6 +14,10 @@ import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+
+/**
+ * @author Jose Vicente
+ */
 class EmployeeQueryTest {
 
     private static ArrayList<Employee> employees;

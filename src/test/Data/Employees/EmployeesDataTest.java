@@ -9,6 +9,9 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * @author Jose Vicente
+ */
 class EmployeesDataTest {
     private static ArrayList<Employee> employees;
 
